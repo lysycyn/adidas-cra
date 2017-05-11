@@ -1,7 +1,7 @@
 import React from "react"
 
 export default () => {
-  return ( 
+  return (
     <section class="item-container">
       детали
     </section>

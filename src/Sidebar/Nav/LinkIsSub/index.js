@@ -1,12 +1,12 @@
 import React from 'react';
-import NavItem from '../NavItem'
+import Link from '../Link'
 import './styles.css'
 
 export default (props) => {
-  const {isActive=false, url, name} = props;
+  const {isActive=false, href, name} = props;
   return (
       <div className="has-submenu">
-          <NavItem isActive={isActive} url={url} name={name} />
+          <Link isActive={isActive} href={href} name={name} />
       </div>
   );
 };

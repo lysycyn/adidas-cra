@@ -4,6 +4,5 @@
   margin-bottom: 1.75rem;
   width: 7.8rem;
   height: 7.8rem;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }

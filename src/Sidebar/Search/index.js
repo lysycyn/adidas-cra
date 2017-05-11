@@ -1,5 +1,5 @@
 import React from 'react';
-import Field from './Field/index'
+import Field from './Field'
 import './styles.css'
 
 export default () => {

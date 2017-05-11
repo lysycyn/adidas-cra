@@ -18,7 +18,7 @@ h3 {
 }
 html {
   box-sizing: border-box;
-  font-size: 10px;
+  font-size: 1em;
 }
 *,
 *:after,
@@ -37,10 +37,6 @@ button {
   padding: 0;
 }
 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
