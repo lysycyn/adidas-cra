@@ -1,0 +1,10 @@
+.sidebar {
+  padding: 0 1.83rem;
+  padding-top: 2.59rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 34.5%;
+          flex: 1 0 34.5%;
+  max-width: 414px;
+  min-height: 100vh;
+  background: #000;
+}

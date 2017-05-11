@@ -1,0 +1,15 @@
+.has-submenu {
+  position: relative;
+  display: inline-block;
+  padding-right: 2.75rem;
+}
+.has-submenu:before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  right: 0;
+  height: 2.75rem;
+  width: 2.75rem;
+  background: url("icon-arrow.svg") center no-repeat;
+}
