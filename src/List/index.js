@@ -1,13 +1,13 @@
 import React from "react"
 import Filter from "./Filter"
 import Cards from "./Cards"
-import "./styles.css"
+import { Wrapper } from "./styled"
 
 export default () => {
   return (
-    <section className="shoes-container">
+    <Wrapper>
       <Filter />
       <Cards />
-    </section>
+    </Wrapper>
   )
 }

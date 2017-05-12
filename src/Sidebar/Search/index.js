@@ -1,11 +1,10 @@
-import React from 'react';
-import Field from './Field'
-import './styles.css'
+import React from "react"
+import { Form, Input } from "./styled"
 
 export default () => {
   return (
-    <form className="search">
-      <Field />
-    </form>
-  );
-};
+    <Form isSearch>
+      <Input />
+    </Form>
+  )
+}

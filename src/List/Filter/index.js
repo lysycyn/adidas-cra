@@ -1,11 +1,16 @@
 import React from "react"
 import Logo from "./Logo"
-import "./styles.css"
+import { Grid, Row } from "react-flexboxgrid"
+import { Wrapper } from "./styled"
 
 export default () => {
   return (
-    <div className="filter">
-      <Logo />
-    </div>
-  );
+    <Wrapper className="filter">
+      <Grid fluid>
+        <Row>
+          <Logo />
+        </Row>
+      </Grid>
+    </Wrapper>
+  )
 }
