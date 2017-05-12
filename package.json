@@ -4,10 +4,12 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.5",
+    "normalize.css": "^7.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-flexboxgrid": "^1.0.0",
-    "react-router-dom": "^4.1.1"
+    "react-router-dom": "^4.1.1",
+    "styled-components": "^1.4.6"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

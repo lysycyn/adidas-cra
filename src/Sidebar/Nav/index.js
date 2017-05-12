@@ -1,8 +1,8 @@
-import React from 'react';
-import Link from './Link'
-import LinkIsSub from './LinkIsSub'
-import SubNav from './SubNav'
-import './styles.css'
+import React from "react"
+import Link from "./Link"
+import LinkIsSub from "./LinkIsSub"
+import SubNav from "./SubNav"
+import "./styles.css"
 
 export default () => {
   return (
@@ -12,5 +12,5 @@ export default () => {
       <Link href="#" name="Brands" />
       <Link href="#" name="Micoash" />
     </nav>
-  );
-};
+  )
+}

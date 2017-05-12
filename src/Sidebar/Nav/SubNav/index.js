@@ -1,6 +1,6 @@
-import React from 'react';
-import './styles.css'
-import Link from './Link'
+import React from "react"
+import "./styles.css"
+import Link from "./Link"
 
 export default () => {
   return (
@@ -9,5 +9,5 @@ export default () => {
       <Link href="#" name="Clothing" />
       <Link href="#" name="Accesories" />
     </nav>
-  );
-};
+  )
+}

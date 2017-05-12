@@ -1,7 +1,7 @@
 import React from "react"
 import Filter from "./Filter"
 import Cards from "./Cards"
-import './styles.css'
+import "./styles.css"
 
 export default () => {
   return (
@@ -9,5 +9,5 @@ export default () => {
       <Filter />
       <Cards />
     </section>
-  );
-};
+  )
+}
