@@ -2,14 +2,14 @@ import React from "react"
 import Logo from "./Logo"
 import Search from "./Search"
 import Nav from "./Nav"
-import "./styles.css"
+import { Wrapper } from "./styled"
 
 export default () => {
   return (
-    <aside className="sidebar">
+    <Wrapper>
       <Logo />
       <Search />
       <Nav />
-    </aside>
+    </Wrapper>
   )
 }

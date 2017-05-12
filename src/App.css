@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: 1em;
+  font-size: 10px;
 }
 *,
 *:after,
@@ -19,9 +19,4 @@ button {
   outline: none;
   border: none;
   padding: 0;
-}
-
-.wrapper {
-  display: flex;
-  flex-grow: 1;
 }

@@ -1,16 +1,17 @@
 import React from "react"
-import Link from "./Link"
-import LinkIsSub from "./LinkIsSub"
-import SubNav from "./SubNav"
-import "./styles.css"
+import { Nav, NavLink, SubNav, SubNavLink } from "./styled"
 
 export default () => {
   return (
-    <nav className="menu">
-      <LinkIsSub isActive href="#" name="Sports" />
-      <SubNav />
-      <Link href="#" name="Brands" />
-      <Link href="#" name="Micoash" />
-    </nav>
+    <Nav>
+      <NavLink isActive isSubNav to="#">Sports</NavLink>
+      <SubNav>
+        <SubNavLink isActive to="#">Shoes</SubNavLink>
+        <SubNavLink to="#">Clothing</SubNavLink>
+        <SubNavLink to="#">Accesories</SubNavLink>
+      </SubNav>
+      <NavLink to="#">Brands</NavLink>
+      <NavLink to="#">Micoash</NavLink>
+    </Nav>
   )
 }
