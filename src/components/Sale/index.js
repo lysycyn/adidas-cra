@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
 const Wrapper = styled.span`
   display: inline-block;
@@ -20,8 +20,6 @@ const Wrapper = styled.span`
   ${props => props.inDetails && `
     mergin-left: 2rem;
   `}
-`
+`;
 
-export default props => {
-  return <Wrapper {...props}>Sale</Wrapper>
-}
+export default props => <Wrapper {...props}>Sale</Wrapper>;
