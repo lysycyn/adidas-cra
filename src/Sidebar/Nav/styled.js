@@ -8,7 +8,7 @@ export const Nav = styled.nav`
 
 export const NavLink = styled(Link)`
   position: relative;
-  display: inline-block;
+  display: block;
   margin-bottom: 2.42rem;
   text-transform: uppercase;
   font-family: "avenir";
@@ -24,7 +24,7 @@ export const NavLink = styled(Link)`
 
   ${props => props.isSubNav && `
     padding-right: 2.75rem;
-
+    display: inline-block;
     &:after {
       position: absolute;
       display: block;
