@@ -1,16 +1,17 @@
 import React from "react"
-import "./styles.css"
+import { Wrapper, Logo } from "./styled"
 
 export default () => {
   return (
-    <div className="filter-logo">
-      <img className="filter-logo__image"
+    <Wrapper>
+      <Logo
         src={require("./filter.png")}
         srcSet={`
-           ${require('./filter@2x.png')} 2x,
-           ${require('./filter@3x.png')} 3x
+           ${require("./filter@2x.png")} 2x,
+           ${require("./filter@3x.png")} 3x
         `}
-        alt="фильтр"/>
-    </div>
-  );
+        alt="фильтр"
+      />
+    </Wrapper>
+  )
 }

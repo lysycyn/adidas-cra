@@ -4,7 +4,7 @@ import { Logo } from "./styled"
 
 export default () => {
   return (
-    <Link to="#">
+    <Link to="/">
       <Logo
         src={`${require("./logo.png")}`}
         srcSet={`
