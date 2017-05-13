@@ -10,6 +10,17 @@ export const Wrapper = styled.aside`
   ${media.lg("max")`
     flex: 1 0 34.5%;
   `}
-  min-height: 100vh;
+  ${media.xs("max")`
+    padding-top: 0;
+  `}
+  ${media.xs("min")`
+    min-height: 100vh;
+  `}
   background: #000;
+`
+
+export const HideMobile = styled.div`
+  ${media.xs("max")`
+    display: none;
+  `}
 `

@@ -4,12 +4,16 @@ import styled from "styled-components"
 import Sidebar from "./Sidebar"
 import Details from "./Details"
 import List from "./List"
+import { media } from "./styled-components/media"
 import "normalize.css"
 import "./styled-components/global"
 
 const Wrapper = styled.div`
   display: flex;
   flex-grow: 1;
+  ${media.xs("max")`
+    flex-direction: column;
+  `}
 `
 
 class App extends Component {
