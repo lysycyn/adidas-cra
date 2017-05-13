@@ -3,6 +3,7 @@ import { media } from "../../styled-components/media"
 
 export const Wrapper = styled.section`
   flex-basis: 100%;
+  margin-bottom: 1rem;
 `
 
 export const Button = styled.button`
