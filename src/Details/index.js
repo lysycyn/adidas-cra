@@ -1,7 +1,7 @@
 import React from "react"
 import { Grid, Row, Col } from "react-flexbox-grid"
-import { Sale } from "../components/Sale"
-import { BigImage } from "./BigImage"
+import Sale from "../components/Sale"
+import BigImage from "./BigImage"
 import {
   Wrapper,
   Content,
@@ -24,12 +24,14 @@ export default () => {
               <Col xs={12} sm={5}>
                 <Title>Ultra Boost</Title>
               </Col>
-              <Col xs={12} sm={4} middle="xs" end="xs">
-                <ButtonColor color="#c5c5c5" />
-                <ButtonColor color="#4d87ca" />
-                <ButtonColor color="#4a4a4a" />
-                <ButtonColor color="#e0e0e0" />
-                {/* <Sale inDetails /> */}
+              <Col xs={12} sm={4}>
+                <Row end="xs" middle="xs">
+                  <ButtonColor color="#c5c5c5" />
+                  <ButtonColor color="#4d87ca" />
+                  <ButtonColor color="#4a4a4a" />
+                  <ButtonColor color="#e0e0e0" />
+                  <Sale inDetails />
+                </Row>
               </Col>
             </Row>
             <Row end="xs">
@@ -42,12 +44,15 @@ export default () => {
                 <ButtonSave>Save</ButtonSave>
               </Col>
             </Row>
-            {/* <BigImage
-              src={require("../assets/img/boot_big.jpg")}
-              srcSet={`${require("../assets/img/boot_big@2x.jpg")} 2x
-                ${require("../assets/img/boot_big@3x.jpg")} 3x`}
-              alt="bigphoto"
-            /> */}
+            <Row center="lg">
+              <BigImage
+                src={require("../assets/img/boot_big.jpg")}
+                srcSet={`${require("../assets/img/boot_big@2x.jpg")} 2x
+                    ${require("../assets/img/boot_big@3x.jpg")} 3x`}
+                alt="bigphoto"
+              />
+            </Row>
+
           </Grid>
         </Header>
       </Content>
