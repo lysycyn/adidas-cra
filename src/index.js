@@ -1,8 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import ReactDOM from "react-dom"
+import React, { Component } from "react"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import styled from "styled-components"
+import Sidebar from "./Sidebar"
+import Details from "./Details"
+import List from "./List"
+import { media } from "./styled-components/media"
+import "normalize.css"
+import "./styled-components/global"
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+const Wrapper = styled.div`
+  display: flex;
+  flex-grow: 1;
+  ${media.xs("max")`
+    flex-direction: column;
+  `}
+`
+
+class App extends Component {
+  render() {
+    return (
+      <Router>
+        <Wrapper>
+          <Sidebar />
+          <Route exact path="/" component={List} />
+          <Route path="/item" component={Details} />
+        </Wrapper>
+      </Router>
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("root"))
