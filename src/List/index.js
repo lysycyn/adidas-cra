@@ -31,4 +31,4 @@ export default () => (
       </Row>
     </Grid>
   </Wrapper>
-  );
+);

@@ -15,3 +15,11 @@ export const Hr = styled.hr`
 =======
 >>>>>>> index
 `
+export const Hr = styled.hr`
+  width: 100%;
+  margin-bottom: 1.7rem;
+  background-color: #ebebeb;
+  height: 0.3rem;
+  border: none;
+  outline: none;
+`
