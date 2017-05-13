@@ -16,8 +16,12 @@ const Wrapper = styled.span`
     top: 1.4rem;
     right: 1.4rem;
   `}
+
+  ${props => props.inDetails && `
+    mergin-left: 2rem;
+  `}
 `
 
 export default props => {
-  return <Wrapper props>Sale</Wrapper>
+  return <Wrapper {...props}>Sale</Wrapper>
 }
