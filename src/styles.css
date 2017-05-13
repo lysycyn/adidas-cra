@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "avenir";
+  src: url("assets/fonts/avenir-next-bold.woff");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "avenir";
+  src: url("assets/fonts/avenir-next-regular.woff");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "andale";
+  src: url("assets//fonts/Andale-Mono.woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+@media screen and (min-width: 1439px){
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 1439px){
+  html {
+    font-size: 1em;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+a,
+a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+
+input:focus{
+  outline: none;
+}

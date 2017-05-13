@@ -5,8 +5,8 @@ import Details from "./Details"
 import List from "./List"
 import styled from "styled-components"
 import { media } from "./styled-components/media"
-import "./styled-components/global"
 import "normalize.css"
+import "./styles.css"
 
 const Wrapper = styled.div`
   display: flex;

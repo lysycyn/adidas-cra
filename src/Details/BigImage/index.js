@@ -14,7 +14,7 @@ const Image = styled.img`
 export default props => {
   return (
     <Wrapper>
-      <Col xs={12} md={10} lg={8}>
+      <Col xs={12} md={10} lg={9}>
         <Image src={props.src} srcSet={props.srcSet} alt={props.alt} />
       </Col>
     </Wrapper>

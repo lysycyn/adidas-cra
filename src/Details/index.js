@@ -2,16 +2,20 @@ import React from "react"
 import { Grid, Row, Col } from "react-flexbox-grid"
 import Sale from "../components/Sale"
 import BigImage from "./BigImage"
+import SmallImage from "./SmallImage"
 import {
   Wrapper,
   Content,
   BuyNowBtn,
   Header,
   Title,
-  ButtonsWrapper,
   ButtonColor,
   Price,
   ButtonSave,
+  PhotosWrapper,
+  Lines,
+  ButtonMore,
+  Description,
 } from "./styled"
 
 export default () => {
@@ -52,24 +56,44 @@ export default () => {
                 alt="bigphoto"
               />
             </Row>
-
+            <PhotosWrapper>
+              <Row middle="xs">
+                <Col sm={4} md={2} lg={2}>
+                  <SmallImage src={require("../assets/img/boot_sm1.jpg")} />
+                </Col>
+                <Col sm={4} md={2} lg={2}>
+                  <SmallImage src={require("../assets/img/boot_sm2.jpg")} />
+                </Col>
+                <Col sm={4} md={2} lg={2}>
+                  <SmallImage src={require("../assets/img/boot_sm1.jpg")} />
+                </Col>
+                <Col sm={4} md={2} lg={2}>
+                  <SmallImage
+                    isActive
+                    src={require("../assets/img/boot_sm2.jpg")}
+                  />
+                </Col>
+                <Col sm={4} md={2} lg={3}>
+                  <Lines />
+                </Col>
+                <Col sm={4} md={2} lg={1}>
+                  <ButtonMore>
+                    See<br />
+                    More<br />
+                    Photos
+                  </ButtonMore>
+                </Col>
+              </Row>
+            </PhotosWrapper>
+            <Description>
+              <b>Adidas</b> is a German multinational corporation,
+              headquartered in Herzogenaurach, Germany, that designs and
+              manufactures shoes, clothing and accessories.
+            </Description>
           </Grid>
         </Header>
       </Content>
       <BuyNowBtn>Buy Now</BuyNowBtn>
     </Wrapper>
   )
-}
-
-{
-  /* <BigImage
-  src={require("../assets/img/boot_big.jpg")}
-  srcSet={`${require("../assets/img/boot_big@2x.jpg")} 2x
-    ${require("../assets/img/boot_big@3x.jpg")} 3x`}
-  alt="bigphoto"
-
-  src="sdf"
-  srcSet="sdf"
-  alt="bigphoto"
-/> */
 }

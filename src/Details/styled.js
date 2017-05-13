@@ -87,3 +87,53 @@ export const ButtonSave = styled.button`
   text-transform: uppercase;
   border-radius: 38px;
 `
+
+export const PhotosWrapper = styled.div`
+  margin-bottom: 3rem;
+`
+
+export const Lines = styled.span`
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e7e7e7;
+  border-radius: 1px;
+
+  &:after,
+  &:before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background: #e7e7e7;
+    border-radius: 1px;
+  }
+  &:before {
+    top: -5px;
+  }
+  &:after {
+    bottom: -5px;
+  }
+`
+
+export const ButtonMore = styled.div`
+  font-family: "avenir";
+  font-size: 14px;
+  text-align: left;
+  color: #c0c0c0;
+`
+export const Description = styled.p`
+  margin-bottom: 15rem;
+  font-family: "avenir";
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 50px;
+  color: #d8d8d8;
+
+  & b {
+    color: #6e6e6e;
+    font-weight: 400;
+  }
+`
