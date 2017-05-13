@@ -18,7 +18,7 @@ const Wrapper = styled.span`
   `}
 
   ${props => props.inDetails && `
-    mergin-left: 2rem;
+    margin-left: 2rem;
   `}
 `
 

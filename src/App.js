@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
-import styled from "styled-components"
 import Sidebar from "./Sidebar"
 import Details from "./Details"
 import List from "./List"
+import styled from "styled-components"
 import { media } from "./styled-components/media"
-import "normalize.css"
 import "./styled-components/global"
+import "normalize.css"
 
 const Wrapper = styled.div`
   display: flex;
