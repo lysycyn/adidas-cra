@@ -1,12 +1,12 @@
 /* eslint-disable global-require */
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export const Nav = styled.nav`
   text-align: center;
 `;
 
-export const NavLink = styled(Link)`
+export const NavLinkItem = styled(NavLink)`
   position: relative;
   display: block;
   text-transform: uppercase;
@@ -17,9 +17,14 @@ export const NavLink = styled(Link)`
   margin-bottom: 2.42rem;
   transition: .6s;
   color: #3a3a3a;
-  ${props => props.isActive && 'color: #ffffff'}
-  $:hover{
+
+  &:hover{
     color: #fff;
+
+  }
+  &.is-active {
+    color: #ffffff;
+    opacity: 1;
   }
 
   ${props => props.isSubNav && `

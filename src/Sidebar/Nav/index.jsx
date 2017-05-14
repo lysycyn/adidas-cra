@@ -1,15 +1,15 @@
 import React from 'react';
-import { Nav, NavLink, SubNav, SubNavLink } from './styled';
+import { Nav, NavLinkItem, SubNav, SubNavLink } from './styled';
 
 export default () => (
   <Nav>
-    <NavLink isActive isSubNav to="#">Sports</NavLink>
+    <NavLinkItem activeClassName="is-active" isSubNav to="/">Sports</NavLinkItem>
     <SubNav>
       <SubNavLink isActive to="#">Shoes</SubNavLink>
       <SubNavLink to="#">Clothing</SubNavLink>
       <SubNavLink to="#">Accesories</SubNavLink>
     </SubNav>
-    <NavLink to="#">Brands</NavLink>
-    <NavLink to="#">Micoash</NavLink>
+    <NavLinkItem to="#">Brands</NavLinkItem>
+    <NavLinkItem to="#">Micoash</NavLinkItem>
   </Nav>
 );

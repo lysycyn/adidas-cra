@@ -173,16 +173,12 @@ export const ButtonMore = styled.div`
 `;
 
 export const Description = styled.p`
-  margin-bottom: 7rem;
+  margin-bottom: 15rem;
   font-family: "avenir";
   font-weight: 400;
   font-size: 33px;
   line-height: 50px;
   color: #d8d8d8;
-
-  ${media.sm('min')`
-    display: none;
-  `}
 
   & b {
     color: #6e6e6e;
