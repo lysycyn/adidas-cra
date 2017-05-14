@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import { media } from '../styled-components/media';
+import media from '../styled-components/media';
 
 export const Wrapper = styled.section`
-  padding: 1.1rem 0;
+  padding: 0.5rem 0;
+  ${media.lg('min')`
+    padding: 1.1rem 0;
+  `}
 `;
 
 export const Hr = styled.hr`

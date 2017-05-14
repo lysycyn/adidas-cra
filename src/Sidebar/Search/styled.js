@@ -1,12 +1,13 @@
-import styled from "styled-components"
-import { media } from "../../styled-components/media"
+/* eslint-disable global-require */
+import styled from 'styled-components';
+import media from '../../styled-components/media';
 
 export const Form = styled.form`
   position: relative;
-  ${media.lg("min")`
+  ${media.lg('min')`
     margin-bottom: 12.342rem;
   `}
-  ${media.lg("max")`
+  ${media.lg('max')`
     margin-bottom: 12em;
   `}
   ${props => props.isSearch && `
@@ -18,11 +19,11 @@ export const Form = styled.form`
       height: 2.66rem;
       top: 1.3rem;
       left: 1.167rem;
-      background-image: url(${require("./icon-search.svg")});
+      background-image: url(${require('./icon-search.svg')});
       background-size: cover;
     }
   `}
-`
+`;
 export const Input = styled.input`
   display: block;
   width: 100%;
@@ -36,4 +37,4 @@ export const Input = styled.input`
   border-bottom: 0.4rem solid rgba(55,55,55,0.56);
   background: #000;
   cursor: pointer;
-`
+`;

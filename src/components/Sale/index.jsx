@@ -13,8 +13,8 @@ const Wrapper = styled.span`
 
   ${props => props.inCard && `
     position: absolute;
-    top: 1.4rem;
-    right: 1.4rem;
+    top: 0.5rem;
+    right: 0.5rem;
   `}
 
   ${props => props.inDetails && `

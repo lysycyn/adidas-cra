@@ -1,23 +1,33 @@
-import styled from "styled-components"
-import { Link } from "react-router-dom"
-import { media } from "../../styled-components/media"
+/* eslint-disable global-require */
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import media from '../../styled-components/media';
 
 export const Nav = styled.nav`
   text-align: center;
-`
+`;
 
 export const NavLink = styled(Link)`
   position: relative;
   display: block;
-  margin-bottom: 2.42rem;
+
   text-transform: uppercase;
   font-family: "avenir";
   font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 3.3rem;
+  ${media.lg('min')`
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    margin-bottom: 2.42rem;
+  `}
+  ${media.lg('max')`
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  `}
+
   transition: .6s;
   color: #3a3a3a;
-  ${props => props.isActive && `color: #ffffff`}
+  ${props => props.isActive && 'color: #ffffff'}
   $:hover{
     color: #fff;
   }
@@ -33,10 +43,10 @@ export const NavLink = styled(Link)`
       right: 0;
       height: 2.75rem;
       width: 2.75rem;
-      background: url(${require("./icon-arrow.svg")}) center no-repeat;
+      background: url(${require('./icon-arrow.svg')}) center no-repeat;
     }
   `}
-`
+`;
 
 export const SubNav = styled.nav`
   padding-top: 0.25rem;
@@ -44,7 +54,7 @@ export const SubNav = styled.nav`
   margin-bottom: 2.25rem;
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const SubNavLink = styled(Link)`
   display: inline-block;
@@ -56,5 +66,5 @@ export const SubNavLink = styled(Link)`
   font-size: 2.4rem;
   line-height: 2.7rem;
   color: #3a3a3a;
-  ${props => props.isActive && `color: #ffffff`}
-`
+  ${props => props.isActive && 'color: #ffffff'}
+`;
