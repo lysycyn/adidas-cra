@@ -20,7 +20,7 @@ export const NavLink = styled(Link)`
     margin-bottom: 2.42rem;
   `}
   ${media.lg('max')`
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     line-height: 2rem;
     margin-bottom: 1.5rem;
   `}
@@ -41,8 +41,18 @@ export const NavLink = styled(Link)`
       content: "";
       top: 0;
       right: 0;
-      height: 2.75rem;
-      width: 2.75rem;
+      height: 1.7rem;
+      width: 1.7rem;
+      ${media.lg('min')`
+        font-size: 2.4rem;
+        line-height: 3.3rem;
+        margin-bottom: 2.42rem;
+      `}
+      ${media.lg('max')`
+        font-size: 1.7rem;
+        line-height: 2rem;
+        margin-bottom: 1.5rem;
+      `}
       background: url(${require('./icon-arrow.svg')}) center no-repeat;
     }
   `}
@@ -60,6 +70,16 @@ export const SubNavLink = styled(Link)`
   display: inline-block;
   margin: 0 auto;
   margin-bottom: 2.168rem;
+  ${media.lg('min')`
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+    margin-bottom: 2.42rem;
+  `}
+  ${media.lg('max')`
+    font-size: 1.7rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  `}
   text-transform: uppercase;
   font-family: "andale";
   font-weight: 400;

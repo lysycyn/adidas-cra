@@ -26,7 +26,7 @@ export const BuyNowBtn = styled.button`
   text-align: center;
   color: #fff;
   background: linear-gradient(to right, #4949aa, #27275d);
-  ${media.xs('min')`
+  ${media.sm('min')`
     margin-left: 34.5%;
     padding: 2rem 0;
     width: 65.5%;

@@ -8,10 +8,10 @@ export default styled.img`
   width: 7.8rem;
   height: 7.8rem;
   ${media.sm('max')`
-    width: 3rem;
-    height: 3rem;
+    width: 6rem;
+    height: 6rem;
   `}
-  ${media.xs('max')`
+  ${media.sm('max')`
     margin: 0;
   `}
   object-fit: contain;

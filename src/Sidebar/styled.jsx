@@ -12,7 +12,7 @@ export const Wrapper = styled.aside`
   ${media.lg('max')`
     flex: 1 0 34.5%;
   `}
-  ${media.xs('max')`
+  ${media.sm('max')`
     padding-top: 0;
   `}
   ${media.sm('min')`
@@ -22,7 +22,7 @@ export const Wrapper = styled.aside`
 `;
 
 export const HideMobile = styled.div`
-  ${media.xs('max')`
+  ${media.sm('max')`
     display: none;
   `}
 `;

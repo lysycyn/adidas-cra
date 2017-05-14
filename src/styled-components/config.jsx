@@ -3,6 +3,6 @@ export default {
     xs: '468px',
     sm: '768px',
     md: '970px',
-    lg: '1439px',
+    lg: '1200px',
   },
 };

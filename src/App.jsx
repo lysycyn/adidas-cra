@@ -11,7 +11,7 @@ import './styles.css';
 const Wrapper = styled.div`
   display: flex;
   flex-grow: 1;
-  ${media.xs('max')`
+  ${media.sm('max')`
     flex-direction: column;
   `}
 `;
