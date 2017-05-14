@@ -6,6 +6,8 @@ export const Wrapper = styled.aside`
   padding-top: 2.59rem;
   ${media.lg('min')`
     flex: 1 0 41.4rem;
+    padding: 0 1.83rem;
+    padding-top: 2.59rem;
   `}
   ${media.lg('max')`
     flex: 1 0 34.5%;
@@ -13,7 +15,7 @@ export const Wrapper = styled.aside`
   ${media.xs('max')`
     padding-top: 0;
   `}
-  ${media.xs('min')`
+  ${media.sm('min')`
     min-height: 100vh;
   `}
   background: #000;

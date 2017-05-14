@@ -56,6 +56,11 @@ export const ButtonColor = styled.button`
   background: ${props => props.color};
 `;
 
+export const SaleWrapper = styled.div`
+  display: inline-block;
+  margin-left: 2rem;
+`;
+
 export const Title = styled.h1`
   margin: 0;
   font-family: "avenir";

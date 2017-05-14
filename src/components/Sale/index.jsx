@@ -10,16 +10,6 @@ const Wrapper = styled.span`
   background: #ff5c5c;
   text-transform: uppercase;
   padding: .5rem 1.7rem;
-
-  ${props => props.inCard && `
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-  `}
-
-  ${props => props.inDetails && `
-    margin-left: 2rem;
-  `}
 `;
 
 export default props => <Wrapper {...props}>Sale</Wrapper>;

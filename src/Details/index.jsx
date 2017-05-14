@@ -12,6 +12,7 @@ import {
   Header,
   Title,
   ButtonColor,
+  SaleWrapper,
   Price,
   ButtonSave,
   PhotosWrapper,
@@ -35,7 +36,9 @@ export default () => (
                 <ButtonColor color="#4d87ca" />
                 <ButtonColor color="#4a4a4a" />
                 <ButtonColor color="#e0e0e0" />
-                <Sale inDetails />
+                <SaleWrapper>
+                  <Sale />
+                </SaleWrapper>
               </Row>
             </Col>
           </Row>

@@ -38,3 +38,9 @@ export const BuyBtn = styled(Link)`
   font-weight: 700;
   background: linear-gradient(107deg, #0c09bf, #966dd8);
 `;
+
+export const SaleWrapper = styled.div`
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+`;

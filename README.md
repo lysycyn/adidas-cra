@@ -1,4 +1,14 @@
+# Adidas-shop
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-npm install
-npm start
+```sh
+$ npm install
+    Install all the packages for the development server.
+
+$ npm start
+    Run dev-server.
+
+$ npm run lint
+    Run the eslint.
+```
