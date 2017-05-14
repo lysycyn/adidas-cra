@@ -8,7 +8,7 @@ export default () => (
   <Wrapper>
     <Grid fluid>
       <Row middle="xs">
-        <Col md={1}>
+        <Col sm={1}>
           <WrapperFilter>
             <Logo
               src={require('./filter.png')}
@@ -20,11 +20,11 @@ export default () => (
             />
           </WrapperFilter>
         </Col>
-        <Col xs={12} md={3}>
+        <Col xs={12} sm={4}>
           <Button isActive>Man</Button>
           <Button>Women</Button>
         </Col>
-        <Col xs={12} md={8}>
+        <Col xs={12} sm={7}>
           <Title>Size</Title>
           <Button isSize>36</Button>
           <Button isSize>37</Button>

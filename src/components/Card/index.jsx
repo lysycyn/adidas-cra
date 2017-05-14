@@ -9,6 +9,6 @@ export default props => (
         <Sale />
       </SaleWrapper>}
     <Image src={props.src} />
-    <BuyBtn to={props.to}>{props.price}</BuyBtn>
+    <BuyBtn isSale={props.isSale} to={props.to}>{props.price}</BuyBtn>
   </Wrapper>
 );

@@ -4,12 +4,12 @@ import media from '../../styled-components/media';
 
 export const Wrapper = styled.div`
   position: relative;
-  padding: .2rem;
-  margin-bottom: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
 
   ${media.lg('min')`
-    padding: .3rem;
-    margin-bottom: 2.084rem;
+    padding: 1.1rem;
+    margin-bottom: 3rem;
   `}
   font-size: 0;
   background: #ebebeb;
@@ -25,22 +25,29 @@ export const Image = styled.img`
 export const BuyBtn = styled(Link)`
   display: block;
   width: 100%;
-  margin-top: 0.2rem;
-  padding: 1rem;
-  font-size: 1.5rem;
-  ${media.lg('min')`
-    margin-top: 0.3rem;
-    padding: 2.251rem;
-    font-size: 3rem;
-  `}
+  margin-top: 1rem;
+  padding: 3.5rem 0;
+  font-size: 3.75rem;
+  line-height: 5rem;
+  color: #000;
   text-align: center;
   font-family: "avenir";
   font-weight: 700;
-  background: linear-gradient(107deg, #0c09bf, #966dd8);
+  background: #fff;
+  ${media.lg('min')`
+    margin-top: 1.1rem;
+    padding: 2.251rem;
+    font-size: 3rem;
+  `}
+  ${props => props.isSale && `
+    background: linear-gradient(107deg, #0c09bf, #966dd8);
+    color: #fff;
+  `}
+
 `;
 
 export const SaleWrapper = styled.div`
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 1.5rem;
+  right: 1.5rem;
 `;

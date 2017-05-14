@@ -13,7 +13,7 @@ export const Wrapper = styled.aside`
     flex: 1 0 34.5%;
   `}
   ${media.sm('max')`
-    padding-top: 0;
+    padding: 0 2rem;
   `}
   ${media.sm('min')`
     min-height: 100vh;

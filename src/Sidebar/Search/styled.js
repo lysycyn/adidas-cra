@@ -5,10 +5,10 @@ import media from '../../styled-components/media';
 export const Form = styled.form`
   position: relative;
   ${media.lg('min')`
-    margin-bottom: 12.342rem;
+    margin-bottom: 8rem;
   `}
   ${media.lg('max')`
-    margin-bottom: 12em;
+    margin-bottom: 10rem;
   `}
   ${props => props.isSearch && `
     &:before{

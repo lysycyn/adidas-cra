@@ -8,27 +8,22 @@ export const Wrapper = styled.section`
 
 export const Button = styled.button`
   display: inline-block;
-  margin-right: 0.5rem;
-  font-size: 1.4rem;
-  line-height: 1.7rem;
+  margin-right: 2rem;
+  font-size: 5rem;
+  line-height: 7rem;
   font-family: "avenir";
-  ${media.lg('min')`
-    margin-right: 1.2rem;
-    font-size: 2.4rem;
-    line-height: 3.3rem;
-  `}
   font-weight: 700;
   color: #ebebeb;
   text-transform: uppercase;
 
+
+  ${media.sm('min')`
+    font-size: 2.5rem;
+    margin-right: 0.6rem;
+    line-height: 2.5rem;
+  `}
+
   ${props => props.isSize && `
-    font-size: 24px;
-    ${media.md('min')`
-      margin-right: 0.7rem;
-    `}
-    ${media.lg('min')`
-      margin-right: 1.25rem;
-    `}
     color: #ebebeb;
   `}
 
@@ -39,12 +34,18 @@ export const Button = styled.button`
 
 export const Title = styled.span`
   display: inline-block;
-  margin-right: 1.417rem;
+  margin-right: 5rem;
   font-family: "avenir";
-  font-size: 2.4rem;
+  font-size: 5rem;
+  line-height: 7rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #4d42f8;
+  ${media.sm('min')`
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-right: 1.5rem;
+  `}
 `;
 
 export const WrapperFilter = styled.div`

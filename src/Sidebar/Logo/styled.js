@@ -8,8 +8,8 @@ export default styled.img`
   width: 7.8rem;
   height: 7.8rem;
   ${media.sm('max')`
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    height: 8rem;
   `}
   ${media.sm('max')`
     margin: 0;

@@ -12,7 +12,9 @@ import {
   Header,
   Title,
   ButtonColor,
+  FlexWrapper,
   SaleWrapper,
+  ButtonsWrapper,
   Price,
   ButtonSave,
   PhotosWrapper,
@@ -27,22 +29,28 @@ export default () => (
       <Header>
         <Grid fluid>
           <Row top="xs" between="xs">
-            <Col xs={12} sm={5}>
+            <Col xs={12} sm={3}>
               <Title>Ultra Boost</Title>
             </Col>
-            <Col xs={12} sm={4}>
-              <Row end="xs" middle="xs">
-                <ButtonColor color="#c5c5c5" />
-                <ButtonColor color="#4d87ca" />
-                <ButtonColor color="#4a4a4a" />
-                <ButtonColor color="#e0e0e0" />
-                <SaleWrapper>
-                  <Sale />
-                </SaleWrapper>
+            <Col xs={12} sm={6}>
+              <Row end middle="xs">
+                <Col xs={12}>
+                  <FlexWrapper>
+                    <ButtonsWrapper>
+                      <ButtonColor color="#c5c5c5" />
+                      <ButtonColor color="#4d87ca" />
+                      <ButtonColor color="#4a4a4a" />
+                      <ButtonColor color="#e0e0e0" />
+                    </ButtonsWrapper>
+                    <SaleWrapper>
+                      <Sale />
+                    </SaleWrapper>
+                  </FlexWrapper>
+                </Col>
               </Row>
             </Col>
           </Row>
-          <Row end="xs">
+          <Row start="xs" end="sm">
             <Col xs={6}>
               <Price>170$</Price>
             </Col>
@@ -62,19 +70,19 @@ export default () => (
           </Row>
           <PhotosWrapper>
             <Row middle="xs">
-              <Col sm={4} md={2} lg={2}>
+              <Col xs={2} md={2} lg={2}>
                 <SmallImage src={require('../assets/img/boot_sm1.jpg')} />
               </Col>
-              <Col sm={4} md={2} lg={2}>
+              <Col xs={2} md={2} lg={2}>
                 <SmallImage src={require('../assets/img/boot_sm2.jpg')} />
               </Col>
-              <Col sm={4} md={2} lg={2}>
+              <Col xs={2} md={2} lg={2}>
                 <SmallImage src={require('../assets/img/boot_sm1.jpg')} />
               </Col>
-              <Col sm={4} md={2} lg={2}>
+              <Col xs={2} md={2} lg={2}>
                 <SmallImage isActive src={require('../assets/img/boot_sm2.jpg')} />
               </Col>
-              <Col sm={4} md={2} lg={3}>
+              <Col xs={2} md={2} lg={3}>
                 <Lines />
               </Col>
               <Col sm={4} md={2} lg={1}>

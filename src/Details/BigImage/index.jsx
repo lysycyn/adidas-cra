@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col } from 'react-flexbox-grid';
+import media from '../../styled-components/media';
 
 const Wrapper = styled.div`
   z-index: -1;
@@ -8,7 +9,9 @@ const Wrapper = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  margin-top: -10rem;
+  ${media.md('min')`
+    margin-top: -10rem;
+  `}
 `;
 
 export default props => (
@@ -17,4 +20,4 @@ export default props => (
       <Image src={props.src} srcSet={props.srcSet} alt={props.alt} />
     </Col>
   </Wrapper>
-  );
+);
