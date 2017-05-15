@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
 import Search from './Search';
-import Menu from './Menu';
+import Nav from './Menu/Nav';
+import Link from './Menu/Link';
+import SubLink from './Menu/SubLink';
 import media from '../styled-components/media';
 
 const Wrapper = styled.aside`
@@ -36,7 +38,16 @@ export default () => (
     <Logo />
     <HideMobile>
       <Search />
-      <Menu />
+      <Nav>
+        <Link activeClassName="is-active" isSubNav to="/">Sports</Link>
+        <Nav isSub>
+          <SubLink to="#">Shoes</SubLink>
+          <SubLink to="#">Clothing</SubLink>
+          <SubLink to="#">Accesories</SubLink>
+        </Nav>
+        <Link to="#">Brands</Link>
+        <Link to="#">Micoash</Link>
+      </Nav>
     </HideMobile>
   </Wrapper>
 );

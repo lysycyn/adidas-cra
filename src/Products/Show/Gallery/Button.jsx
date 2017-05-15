@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from '../styled-components/media';
+import media from '../../../styled-components/media';
 
 const Wrapper = styled.div`
   font-family: "avenir";
@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     display: none;
   `}
 `;
+
 export default () => (
   <Wrapper>
     See<br />

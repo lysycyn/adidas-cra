@@ -2,18 +2,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import Sale from '../components/Sale';
-import BigImage from './BigImage';
-import SmallImage from './SmallImage';
-import ButtonSave from './ButtonSave';
-import ButtonColor from './ButtonColor';
-import ButtonMore from './ButtonMore';
-import ButtonBuyNow from './ButtonBuyNow';
-import Price from './Price';
-import Title from './Title';
-import Lines from './Lines';
+import Label from '../../components/Label';
+import ButtonColor from './Header/ButtonColor';
+import ButtonSave from './Header/ButtonSave';
+import Price from './Header/Price';
+import Title from './Header/Title';
+import BigImage from './Gallery/BigImage';
+import SmallImage from './Gallery/SmallImage';
+import Lines from './Gallery/Lines';
+import More from './Gallery/Button';
 import Description from './Description';
-import media from '../styled-components/media';
+import ButtonBuyNow from './ButtonBuyNow';
+import media from '../../styled-components/media';
 
 const Wrapper = styled.section`
   padding: 1.1rem 0;
@@ -44,7 +44,7 @@ const FlexWrapper = styled.div`
   `}
 `;
 
-const SaleWrapper = styled.div`
+const LabelWrapper = styled.div`
   display: inline-block;
   margin-left: 2rem;
   ${media.sm('max')`
@@ -59,7 +59,7 @@ const ButtonsWrapper = styled.div`
   `}
 `;
 
-const PhotosWrapper = styled.div`
+const GalleryWrapper = styled.div`
   margin-bottom: 3rem;
 `;
 
@@ -82,9 +82,9 @@ export default () => (
                       <ButtonColor color="#4a4a4a" />
                       <ButtonColor color="#e0e0e0" />
                     </ButtonsWrapper>
-                    <SaleWrapper>
-                      <Sale />
-                    </SaleWrapper>
+                    <LabelWrapper>
+                      <Label>Sale</Label>
+                    </LabelWrapper>
                   </FlexWrapper>
                 </Col>
               </Row>
@@ -92,7 +92,7 @@ export default () => (
           </Row>
           <Row start="xs" end="sm">
             <Col xs={6}>
-              <Price>170$</Price>
+              <Price>170</Price>
             </Col>
           </Row>
           <Row>
@@ -102,34 +102,34 @@ export default () => (
           </Row>
           <Row center="lg">
             <BigImage
-              src={require('../assets/img/boot_big.jpg')}
-              srcSet={`${require('../assets/img/boot_big@2x.jpg')} 2x
-                    ${require('../assets/img/boot_big@3x.jpg')} 3x`}
+              src={require('../../assets/img/boot_big.jpg')}
+              srcSet={`${require('../../assets/img/boot_big@2x.jpg')} 2x
+                    ${require('../../assets/img/boot_big@3x.jpg')} 3x`}
               alt="bigphoto"
             />
           </Row>
-          <PhotosWrapper>
+          <GalleryWrapper>
             <Row middle="xs">
               <Col xs={2} md={2} lg={2}>
-                <SmallImage src={require('../assets/img/boot_sm1.jpg')} />
+                <SmallImage src={require('../../assets/img/boot_sm1.jpg')} />
               </Col>
               <Col xs={2} md={2} lg={2}>
-                <SmallImage src={require('../assets/img/boot_sm2.jpg')} />
+                <SmallImage src={require('../../assets/img/boot_sm2.jpg')} />
               </Col>
               <Col xs={2} md={2} lg={2}>
-                <SmallImage src={require('../assets/img/boot_sm1.jpg')} />
+                <SmallImage src={require('../../assets/img/boot_sm1.jpg')} />
               </Col>
               <Col xs={2} md={2} lg={2}>
-                <SmallImage isActive src={require('../assets/img/boot_sm2.jpg')} />
+                <SmallImage isActive src={require('../../assets/img/boot_sm2.jpg')} />
               </Col>
               <Col xs={2} md={2} lg={3}>
                 <Lines />
               </Col>
               <Col xs={2} md={2} lg={1}>
-                <ButtonMore />
+                <More />
               </Col>
             </Row>
-          </PhotosWrapper>
+          </GalleryWrapper>
           <Description>
             <b>Adidas</b> is a German multinational corporation,
             headquartered in Herzogenaurach, Germany, that designs and

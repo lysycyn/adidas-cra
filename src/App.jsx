@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import 'normalize.css';
 import Sidebar from './Sidebar';
-import Details from './Details';
-import List from './List';
+import Show from './Products/Show';
+import List from './Products/List';
 import media from './styled-components/media';
 import './styles.css';
 
@@ -21,7 +21,7 @@ export default () => (
     <Wrapper>
       <Sidebar />
       <Route exact path="/" component={List} />
-      <Route path="/item" component={Details} />
+      <Route path="/item" component={Show} />
     </Wrapper>
   </Router>
 );

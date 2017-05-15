@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import media from '../styled-components/media';
+import media from '../../../styled-components/media';
 
 export default styled.h2`
   margin: 0;
@@ -11,4 +11,7 @@ export default styled.h2`
     margin-top: -4rem;
   `}
   color: #e2e2e2;
+  &:after{
+    content: "$";
+  }
 `;

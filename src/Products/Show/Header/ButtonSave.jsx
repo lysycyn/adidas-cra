@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from '../styled-components/media';
+import media from '../../../styled-components/media';
 
 const Wrapper = styled.button`
   width: 8rem;

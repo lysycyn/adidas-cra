@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Col } from 'react-flexbox-grid';
-import media from '../styled-components/media';
+import media from '../../../styled-components/media';
 
 const Wrapper = styled.div`
   z-index: -1;

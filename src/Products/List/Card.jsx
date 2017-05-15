@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Sale from './Sale';
-import media from '../styled-components/media';
+import Label from '../../components/Label';
+import media from '../../styled-components/media';
 
 const Wrapper = styled.div`
   position: relative;
@@ -53,7 +53,7 @@ export default props => (
   <Wrapper>
     ${props.isSale &&
       <SaleWrapper>
-        <Sale />
+        <Label>Sale</Label>
       </SaleWrapper>}
     <Image src={props.src} />
     <BuyBtn isSale={props.isSale} to={props.to}>{props.price}</BuyBtn>
