@@ -56,14 +56,7 @@ export default () => (
     <Grid fluid>
       <WrapperFilter>
         <WrapperPin>
-          <Icon
-            src={require('./Filters/filter.png')}
-            srcSet={`
-                       ${require('./Filters/filter@2x.png')} 2x,
-                       ${require('./Filters/filter@3x.png')} 3x
-                    `}
-            alt="фильтр"
-          />
+          <Icon />
         </WrapperPin>
         <WrapperGender>
           <Button isActive>Man</Button>
