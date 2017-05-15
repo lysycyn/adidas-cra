@@ -31,25 +31,43 @@ const Header = styled.div`
   margin-bottom: 3rem;
 `;
 
-const FlexWrapper = styled.div`
+const GalleryWrapper = styled.div`
+  margin-bottom: 3rem;
+`;
+
+const HeaderWrapper = styled.div`
   display: flex;
-  flex-basis: 100%;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
   ${media.sm('max')`
-    margin-top: 15rem;
-    justify-content: space-between;
-  `}
-  ${media.sm('min')`
-    justify-content: flex-end;
+    flex-direction: column;
   `}
 `;
 
-const LabelWrapper = styled.div`
-  display: inline-block;
-  margin-left: 2rem;
+const LeftWrapper = styled.div`
+  flex-basis: 25%;
   ${media.sm('max')`
-    order: 1;
-    margin-left: 0;
+    flex-basis: 100%;
+  `}
+`;
+
+const RightWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  ${media.sm('max')`
+    width: 100%;
+    justify-content: space-between;
+  `}
+`;
+
+const TopWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  ${media.sm('max')`
+    justify-content: space-between;
+    order: 2;
   `}
 `;
 
@@ -59,8 +77,18 @@ const ButtonsWrapper = styled.div`
   `}
 `;
 
-const GalleryWrapper = styled.div`
-  margin-bottom: 3rem;
+const LabelWrapper = styled.div`
+  margin-left: 2rem;
+  ${media.sm('max')`
+    margin-left: 0;
+    order: 1;
+  `}
+`;
+
+const PriceWrapper = styled.div`
+  ${media.sm('max')`
+    // order: 1;
+  `}
 `;
 
 export default () => (
@@ -68,43 +96,33 @@ export default () => (
     <Content>
       <Header>
         <Grid fluid>
-          <Row top="xs" between="xs">
-            <Col xs={12} sm={3}>
+          <HeaderWrapper>
+            <LeftWrapper>
               <Title>Ultra Boost</Title>
-            </Col>
-            <Col xs={12} sm={6}>
-              <Row middle="xs">
-                <Col xs={12}>
-                  <FlexWrapper>
-                    <ButtonsWrapper>
-                      <ButtonColor color="#c5c5c5" />
-                      <ButtonColor color="#4d87ca" />
-                      <ButtonColor color="#4a4a4a" />
-                      <ButtonColor color="#e0e0e0" />
-                    </ButtonsWrapper>
-                    <LabelWrapper>
-                      <Label>Sale</Label>
-                    </LabelWrapper>
-                  </FlexWrapper>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-          <Row start="xs" end="sm">
-            <Col xs={6}>
-              <Price>170</Price>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={2}>
               <ButtonSave />
-            </Col>
-          </Row>
+            </LeftWrapper>
+            <RightWrapper>
+              <TopWrapper>
+                <ButtonsWrapper>
+                  <ButtonColor color="#c5c5c5" />
+                  <ButtonColor color="#4d87ca" />
+                  <ButtonColor color="#4a4a4a" />
+                  <ButtonColor color="#e0e0e0" />
+                </ButtonsWrapper>
+                <LabelWrapper>
+                  <Label>Sale</Label>
+                </LabelWrapper>
+              </TopWrapper>
+              <PriceWrapper>
+                <Price>170</Price>
+              </PriceWrapper>
+            </RightWrapper>
+          </HeaderWrapper>
           <Row center="lg">
             <BigImage
               src={require('../../assets/img/boot_big.jpg')}
               srcSet={`${require('../../assets/img/boot_big@2x.jpg')} 2x
-                    ${require('../../assets/img/boot_big@3x.jpg')} 3x`}
+                      ${require('../../assets/img/boot_big@3x.jpg')} 3x`}
               alt="bigphoto"
             />
           </Row>
