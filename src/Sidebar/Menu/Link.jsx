@@ -1,12 +1,8 @@
 /* eslint-disable global-require */
 import styled from 'styled-components';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export const Nav = styled.nav`
-  text-align: center;
-`;
-
-export const NavLinkItem = styled(NavLink)`
+export default styled(NavLink)`
   position: relative;
   display: block;
   text-transform: uppercase;
@@ -17,7 +13,6 @@ export const NavLinkItem = styled(NavLink)`
   margin-bottom: 2.42rem;
   transition: .6s;
   color: #3a3a3a;
-
   &:hover{
     color: #fff;
 
@@ -41,27 +36,4 @@ export const NavLinkItem = styled(NavLink)`
       background: url(${require('./icon-arrow.svg')}) center no-repeat;
     }
   `}
-`;
-
-export const SubNav = styled.nav`
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  margin-bottom: 2.25rem;
-  display: flex;
-  flex-direction: column;
-`;
-
-export const SubNavLink = styled(Link)`
-  display: inline-block;
-  margin: 0 auto;
-  font-size: 3rem;
-  line-height: 3.3rem;
-  margin-bottom: 2.42rem;
-  text-transform: uppercase;
-  font-family: "andale";
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 2.7rem;
-  color: #3a3a3a;
-  ${props => props.isActive && 'color: #ffffff'}
 `;

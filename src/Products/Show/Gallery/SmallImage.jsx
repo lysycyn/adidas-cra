@@ -13,4 +13,4 @@ export default props => (
   <Wrapper isActive={props.isActive}>
     <Image src={props.src} srcSet={props.srcSet} alt={props.alt} />
   </Wrapper>
-  );
+);
