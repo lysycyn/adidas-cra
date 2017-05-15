@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Card from './Card';
-import Pin from './Filters/Pin';
+import Icon from './Filters/Icon';
 import Label from './Filters/Label';
 import Button from './Filters/Button';
 import media from '../../styled-components/media';
@@ -56,7 +56,7 @@ export default () => (
     <Grid fluid>
       <WrapperFilter>
         <WrapperPin>
-          <Pin
+          <Icon
             src={require('./Filters/filter.png')}
             srcSet={`
                        ${require('./Filters/filter@2x.png')} 2x,
