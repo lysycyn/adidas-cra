@@ -11,4 +11,13 @@ $ npm start
 
 $ npm run lint
     Run the eslint.
+
+$ npm run build
+    Build static app
+
+$ surge
+    Deploy project in surge.sh
+
+$ surge -p build -d domain-name.surge.sh
+    Deploy project in exist surge account
 ```
