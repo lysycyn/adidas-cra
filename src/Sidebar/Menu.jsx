@@ -1,12 +1,13 @@
 /* eslint-disable global-require */
+import React from 'react';
 import styled from 'styled-components';
 import { Link, NavLink } from 'react-router-dom';
 
-export const Nav = styled.nav`
+const Menu = styled.nav`
   text-align: center;
 `;
 
-export const NavLinkItem = styled(NavLink)`
+const MenuLink = styled(NavLink)`
   position: relative;
   display: block;
   text-transform: uppercase;
@@ -43,7 +44,7 @@ export const NavLinkItem = styled(NavLink)`
   `}
 `;
 
-export const SubNav = styled.nav`
+const SubMenu = styled.nav`
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   margin-bottom: 2.25rem;
@@ -51,7 +52,7 @@ export const SubNav = styled.nav`
   flex-direction: column;
 `;
 
-export const SubNavLink = styled(Link)`
+const SubMenuLink = styled(Link)`
   display: inline-block;
   margin: 0 auto;
   font-size: 3rem;
@@ -65,3 +66,16 @@ export const SubNavLink = styled(Link)`
   color: #3a3a3a;
   ${props => props.isActive && 'color: #ffffff'}
 `;
+
+export default () => (
+  <Menu>
+    <MenuLink activeClassName="is-active" isSubNav to="/">Sports</MenuLink>
+    <SubMenu>
+      <SubMenuLink isActive to="#">Shoes</SubMenuLink>
+      <SubMenuLink to="#">Clothing</SubMenuLink>
+      <SubMenuLink to="#">Accesories</SubMenuLink>
+    </SubMenu>
+    <MenuLink to="#">Brands</MenuLink>
+    <MenuLink to="#">Micoash</MenuLink>
+  </Menu>
+);

@@ -1,27 +1,67 @@
 /* eslint-disable global-require */
-
 import React from 'react';
+import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Sale from '../components/Sale';
 import BigImage from './BigImage';
 import SmallImage from './SmallImage';
-import {
-  Wrapper,
-  Content,
-  BuyNowBtn,
-  Header,
-  Title,
-  ButtonColor,
-  FlexWrapper,
-  SaleWrapper,
-  ButtonsWrapper,
-  Price,
-  ButtonSave,
-  PhotosWrapper,
-  Lines,
-  ButtonMore,
-  Description,
-} from './styled';
+import ButtonSave from './ButtonSave';
+import ButtonColor from './ButtonColor';
+import ButtonMore from './ButtonMore';
+import ButtonBuyNow from './ButtonBuyNow';
+import Price from './Price';
+import Title from './Title';
+import Lines from './Lines';
+import Description from './Description';
+import media from '../styled-components/media';
+
+const Wrapper = styled.section`
+  padding: 1.1rem 0;
+  flex-basis: 100%;
+  ${media.sm('max')`
+    padding: 4rem 0;
+  `}
+`;
+
+const Content = styled.div`
+  padding: 1rem 0;
+`;
+
+const Header = styled.div`
+  margin-bottom: 3rem;
+`;
+
+const FlexWrapper = styled.div`
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  ${media.sm('max')`
+    margin-top: 15rem;
+    justify-content: space-between;
+  `}
+  ${media.sm('min')`
+    justify-content: flex-end;
+  `}
+`;
+
+const SaleWrapper = styled.div`
+  display: inline-block;
+  margin-left: 2rem;
+  ${media.sm('max')`
+    order: 1;
+    margin-left: 0;
+  `}
+`;
+
+const ButtonsWrapper = styled.div`
+  ${media.sm('max')`
+    order: 2;
+  `}
+`;
+
+const PhotosWrapper = styled.div`
+  margin-bottom: 3rem;
+`;
 
 export default () => (
   <Wrapper>
@@ -33,7 +73,7 @@ export default () => (
               <Title>Ultra Boost</Title>
             </Col>
             <Col xs={12} sm={6}>
-              <Row end middle="xs">
+              <Row middle="xs">
                 <Col xs={12}>
                   <FlexWrapper>
                     <ButtonsWrapper>
@@ -57,7 +97,7 @@ export default () => (
           </Row>
           <Row>
             <Col xs={2}>
-              <ButtonSave>Save</ButtonSave>
+              <ButtonSave />
             </Col>
           </Row>
           <Row center="lg">
@@ -86,11 +126,7 @@ export default () => (
                 <Lines />
               </Col>
               <Col xs={2} md={2} lg={1}>
-                <ButtonMore>
-                  See<br />
-                  More<br />
-                  Photos
-                </ButtonMore>
+                <ButtonMore />
               </Col>
             </Row>
           </PhotosWrapper>
@@ -102,6 +138,6 @@ export default () => (
         </Grid>
       </Header>
     </Content>
-    <BuyNowBtn>Buy Now</BuyNowBtn>
+    <ButtonBuyNow />
   </Wrapper>
 );

@@ -1,10 +1,26 @@
 /* eslint-disable global-require */
-
 import React from 'react';
+import styled from 'styled-components';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Filter from './Filter';
 import Card from '../components/Card';
-import { Wrapper, Hr } from './styled';
+import media from '../styled-components/media';
+
+const Wrapper = styled.section`
+  padding: 1.1rem 0;
+  ${media.lg('min')`
+    padding: 1.1rem 0;
+  `}
+`;
+
+const Hr = styled.hr`
+  width: 100%;
+  margin-bottom: 1.7rem;
+  background-color: #ebebeb;
+  height: 0.5rem;
+  border: none;
+  outline: none;
+`;
 
 export default () => (
   <Wrapper>
