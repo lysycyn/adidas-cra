@@ -21,6 +21,7 @@ export const Form = styled.form`
       left: 1.167rem;
       background-image: url(${require('./icon-search.svg')});
       background-size: cover;
+      background-repeat: no-repeat;
     }
   `}
 `;

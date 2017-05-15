@@ -1,30 +1,37 @@
 /* eslint-disable global-require */
-
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import { Wrapper, Title, Button, WrapperFilter, Logo } from './styled';
+import { Grid } from 'react-flexbox-grid';
+import {
+  Wrapper,
+  Title,
+  Button,
+  WrapperFlex,
+  WrapperFilter,
+  WrapperGender,
+  WrapperSize,
+  Logo,
+} from './styled';
 
 export default () => (
   <Wrapper>
     <Grid fluid>
-      <Row middle="xs">
-        <Col sm={1}>
-          <WrapperFilter>
-            <Logo
-              src={require('./filter.png')}
-              srcSet={`
+      <WrapperFlex>
+        {/* <Row middle="xs"> */}
+        <WrapperFilter>
+          <Logo
+            src={require('./filter.png')}
+            srcSet={`
                    ${require('./filter@2x.png')} 2x,
                    ${require('./filter@3x.png')} 3x
                 `}
-              alt="фильтр"
-            />
-          </WrapperFilter>
-        </Col>
-        <Col xs={12} sm={4}>
+            alt="фильтр"
+          />
+        </WrapperFilter>
+        <WrapperGender>
           <Button isActive>Man</Button>
           <Button>Women</Button>
-        </Col>
-        <Col xs={12} sm={7}>
+        </WrapperGender>
+        <WrapperSize>
           <Title>Size</Title>
           <Button isSize>36</Button>
           <Button isSize>37</Button>
@@ -33,8 +40,9 @@ export default () => (
           <Button isSize isActive>40</Button>
           <Button isSize>41</Button>
           <Button isSize>42</Button>
-        </Col>
-      </Row>
+        </WrapperSize>
+      </WrapperFlex>
+      {/* </Row> */}
     </Grid>
   </Wrapper>
 );

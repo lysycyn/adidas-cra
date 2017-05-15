@@ -6,6 +6,15 @@ export const Wrapper = styled.section`
   margin-bottom: 1rem;
 `;
 
+export const WrapperFlex = styled.div`
+  display: flex;
+  align-items: center;
+  ${media.sm('max')`
+    flex-direction: column;
+    align-items: start;
+  `}
+`;
+
 export const Button = styled.button`
   display: inline-block;
   margin-right: 2rem;
@@ -15,7 +24,6 @@ export const Button = styled.button`
   font-weight: 700;
   color: #ebebeb;
   text-transform: uppercase;
-
 
   ${media.sm('min')`
     font-size: 2.5rem;
@@ -32,6 +40,24 @@ export const Button = styled.button`
   `}
 `;
 
+export const WrapperFilter = styled.div`
+  ${media.sm('max')`
+    display: none;
+  `}
+  width: 4.5rem;
+  padding-left: .6rem;
+  margin-right: 1.7rem;
+  height: 4.5rem;
+  background-color: #ebebeb;
+`;
+
+export const WrapperGender = styled.div`
+  margin-right: 1.2rem;
+`;
+export const WrapperSize = styled.div`
+
+`;
+
 export const Title = styled.span`
   display: inline-block;
   margin-right: 5rem;
@@ -44,23 +70,12 @@ export const Title = styled.span`
   ${media.sm('min')`
     font-size: 2.5rem;
     line-height: 2.5rem;
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
   `}
-`;
-
-export const WrapperFilter = styled.div`
-  ${media.sm('max')`
-    display: none;
-  `}
-  width: 4.586rem;
-  height: 4.586rem;
-  margin-right: 0.2418rem;
-  padding-left: 0.6671rem;
-  background-color: #ebebeb;
 `;
 
 export const Logo = styled.img`
-  width: 3.335rem;
-  height: 4.586rem;
+  width: 3.3rem;
+  height: 4.5rem;
   object-fit: contain;
 `;

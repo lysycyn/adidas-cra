@@ -85,7 +85,7 @@ export default () => (
               <Col xs={2} md={2} lg={3}>
                 <Lines />
               </Col>
-              <Col sm={4} md={2} lg={1}>
+              <Col xs={2} md={2} lg={1}>
                 <ButtonMore>
                   See<br />
                   More<br />
