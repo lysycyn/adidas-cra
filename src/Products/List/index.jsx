@@ -57,10 +57,10 @@ export default () => (
       <WrapperFilter>
         <WrapperPin>
           <Pin
-            src={require('./filter.png')}
+            src={require('./Filters/filter.png')}
             srcSet={`
-                       ${require('./filter@2x.png')} 2x,
-                       ${require('./filter@3x.png')} 3x
+                       ${require('./Filters/filter@2x.png')} 2x,
+                       ${require('./Filters/filter@3x.png')} 3x
                     `}
             alt="фильтр"
           />
