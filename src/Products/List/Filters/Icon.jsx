@@ -8,7 +8,7 @@ const Image = styled.img`
   object-fit: contain;
 `;
 
-export default (
+export default () => (
   <Image
     src={require('./filter.png')}
     srcSet={`

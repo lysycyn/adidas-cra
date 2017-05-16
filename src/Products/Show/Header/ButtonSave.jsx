@@ -15,9 +15,6 @@ const Wrapper = styled.button`
   ${media.sm('max')`
     display: none;
   `}
-  ${media.sm('min')`
-    margin-top: -5rem;
-  `}
 `;
 
 export default () => <Wrapper>Save</Wrapper>;
