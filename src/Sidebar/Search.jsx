@@ -16,10 +16,10 @@ const Form = styled.form`
       position: absolute;
       content: "";
       display: block;
-      width: 2.5rem;
-      height: 2.66rem;
-      top: 1.3rem;
-      left: 1.167rem;
+      width: 3.5rem;
+      height: 3.75rem;
+      top: .5rem;
+      left: 1rem;
       background-image: url(${require('./icon-search.svg')});
       background-size: cover;
       background-repeat: no-repeat;
@@ -30,13 +30,16 @@ const Input = styled.input`
   display: block;
   width: 100%;
   padding: 0.9rem;
-  padding-left: 4.2rem;
-  color: #3a3a3a;
+  padding-left: 5.5rem;
+  color: #fff;
   font-family: "avenir";
-  font-size: 2.4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   border: none;
   border-bottom: 0.4rem solid rgba(55,55,55,0.56);
+  &:hover, &:focus{
+    border-bottom: 0.4rem solid #fff;
+  }
   background: #000;
   cursor: pointer;
 `;

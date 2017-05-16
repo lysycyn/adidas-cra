@@ -16,7 +16,8 @@ const Wrapper = styled.section`
 `;
 
 const WrapperFilter = styled.section`
-  padding-bottom: 1rem;
+padding: 0 .5rem;
+  padding-bottom: 1.1rem;
   display: flex;
   align-items: center;
   ${media.sm('max')`
@@ -25,26 +26,33 @@ const WrapperFilter = styled.section`
   `}
 `;
 
-const WrapperPin = styled.div`
+const WrapperIcon = styled.div`
   ${media.sm('max')`
     display: none;
   `}
   width: 4.5rem;
   padding-left: .6rem;
-  margin-right: 1.7rem;
+  margin-right: 3rem;
   height: 4.5rem;
   background-color: #ebebeb;
+  ${media.md('max')`
+    margin-right: 2.1rem;
+  `}
 `;
 
 const WrapperGender = styled.div`
-  margin-right: 1.2rem;
+  margin-right: 5rem;
+  ${media.md('max')`
+    margin-right: 2.8rem;
+  `}
 `;
 
 const WrapperSize = styled.div``;
 
 const Hr = styled.hr`
   width: 100%;
-  margin-bottom: 1.7rem;
+  margin: 0;
+  margin-bottom: 2rem;
   background-color: #ebebeb;
   height: 0.5rem;
   border: none;
@@ -55,9 +63,9 @@ export default () => (
   <Wrapper>
     <Grid fluid>
       <WrapperFilter>
-        <WrapperPin>
+        <WrapperIcon>
           <Icon />
-        </WrapperPin>
+        </WrapperIcon>
         <WrapperGender>
           <Button isActive>Man</Button>
           <Button>Women</Button>

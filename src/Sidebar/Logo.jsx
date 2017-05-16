@@ -7,7 +7,7 @@ import media from '../styled-components/media';
 const Image = styled.img`
   display: block;
   margin: 0 auto;
-  margin-bottom: 1.75rem;
+  margin-bottom: 3rem;
   width: 7.8rem;
   height: 7.8rem;
   ${media.sm('max')`
