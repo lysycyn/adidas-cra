@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Col } from 'react-flexbox-grid';
 import media from '../../../styled-components/media';
 
 const Wrapper = styled.div`
@@ -15,6 +16,8 @@ const Image = styled.img`
 
 export default props => (
   <Wrapper>
-    <Image src={props.src} srcSet={props.srcSet} alt={props.alt} />
+    <Col xs={12} md={10} lg={9}>
+      <Image src={props.src} srcSet={props.srcSet} alt={props.alt} />
+    </Col>
   </Wrapper>
 );

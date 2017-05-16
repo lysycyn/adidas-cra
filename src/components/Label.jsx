@@ -1,8 +1,7 @@
-import React from 'react';
 import styled from 'styled-components';
-import media from '../../styled-components/media';
+import media from '../styled-components/media';
 
-const Wrapper = styled.span`
+export default styled.span`
   display: inline-block;
   font-family: "avenir";
   font-size: 1.75rem;
@@ -15,5 +14,3 @@ const Wrapper = styled.span`
     font-size: 1.4rem;
   `}
 `;
-
-export default props => <Wrapper {...props}>Sale</Wrapper>;

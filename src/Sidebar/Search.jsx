@@ -1,8 +1,9 @@
 /* eslint-disable global-require */
+import React from 'react';
 import styled from 'styled-components';
-import media from '../../styled-components/media';
+import media from '../styled-components/media';
 
-export const Form = styled.form`
+const Form = styled.form`
   position: relative;
   ${media.lg('min')`
     margin-bottom: 8rem;
@@ -25,7 +26,7 @@ export const Form = styled.form`
     }
   `}
 `;
-export const Input = styled.input`
+const Input = styled.input`
   display: block;
   width: 100%;
   padding: 0.9rem;
@@ -39,3 +40,9 @@ export const Input = styled.input`
   background: #000;
   cursor: pointer;
 `;
+
+export default () => (
+  <Form isSearch>
+    <Input />
+  </Form>
+);
