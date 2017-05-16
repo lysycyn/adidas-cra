@@ -5,13 +5,13 @@ import Label from '../../components/Label';
 import media from '../../styled-components/media';
 
 const OutWrapper = styled.div`
-  padding: 0 .5rem;
+  padding: 0 .2rem;
 `;
 
 const Wrapper = styled.div`
   position: relative;
-  padding: 1rem;
-  margin-bottom: 2rem;
+  padding: .5rem;
+  margin-bottom: 1.4rem;
   font-size: 0;
   background: #ebebeb;
 `;
@@ -24,7 +24,7 @@ const Image = styled.img`
 const BuyBtn = styled(Link)`
   display: block;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: .5rem;
   padding: 2.5rem 0;
   font-size: 2.75rem;
   line-height: 3rem;
@@ -45,8 +45,8 @@ const BuyBtn = styled(Link)`
 
 const SaleWrapper = styled.div`
   position: absolute;
-  top: 1.7rem;
-  right: 1.7rem;
+  top: 1.2rem;
+  right: 1.2rem;
 `;
 
 export default props => (

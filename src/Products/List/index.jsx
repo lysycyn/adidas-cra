@@ -1,7 +1,7 @@
 /* eslint-disable global-require */
 import React from 'react';
 import styled from 'styled-components';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 import Card from './Card';
 import Icon from './Filters/Icon';
 import Label from './Filters/Label';
@@ -16,7 +16,7 @@ const Wrapper = styled.section`
 `;
 
 const WrapperFilter = styled.section`
-padding: 0 .5rem;
+  padding: 0 .2rem;
   padding-bottom: 1.1rem;
   display: flex;
   align-items: center;
@@ -52,16 +52,20 @@ const WrapperSize = styled.div``;
 const Hr = styled.hr`
   width: 100%;
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1.4rem;
   background-color: #ebebeb;
-  height: 0.5rem;
+  height: 0.4rem;
   border: none;
   outline: none;
 `;
 
+const WidthWrapper = styled.div`
+  padding: 0 1.3rem;
+`;
+
 export default () => (
   <Wrapper>
-    <Grid fluid>
+    <WidthWrapper>
       <WrapperFilter>
         <WrapperIcon>
           <Icon />
@@ -81,9 +85,9 @@ export default () => (
           <Button isSize>42</Button>
         </WrapperSize>
       </WrapperFilter>
-    </Grid>
+    </WidthWrapper>
     <Hr />
-    <Grid fluid>
+    <WidthWrapper>
       <Row>
         <Col xs={12} sm={6} md={4} lg={3}>
           <Card isSale src={require('../../assets/img/boot1.jpg')} price="170$" to="/item" />
@@ -104,6 +108,6 @@ export default () => (
           <Card isSale src={require('../../assets/img/boot1.jpg')} price="170$" to="/item" />
         </Col>
       </Row>
-    </Grid>
+    </WidthWrapper>
   </Wrapper>
 );
