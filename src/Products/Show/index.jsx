@@ -87,7 +87,8 @@ const LabelWrapper = styled.div`
 
 const PriceWrapper = styled.div`
   ${media.sm('max')`
-    // order: 1;
+    order: 1;
+    padding-bottom: 1.5rem;
   `}
 `;
 
@@ -121,8 +122,10 @@ export default () => (
           <Row center="lg">
             <BigImage
               src={require('../../assets/img/boot_big.jpg')}
-              srcSet={`${require('../../assets/img/boot_big@2x.jpg')} 2x
-                      ${require('../../assets/img/boot_big@3x.jpg')} 3x`}
+              srcSet={`
+                ${require('../../assets/img/boot_big@2x.jpg')} 2x
+                ${require('../../assets/img/boot_big@3x.jpg')} 3x
+              `}
               alt="bigphoto"
             />
           </Row>
