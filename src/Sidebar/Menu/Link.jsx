@@ -1,21 +1,22 @@
 /* eslint-disable global-require */
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import c from '../../styled-components/config';
 
 export default styled(NavLink)`
   position: relative;
-  display: block;
-  text-transform: uppercase;
-  font-family: "avenir";
+  display: inline-block;
+  margin: 0 auto;
+  margin-bottom: 2.4rem;
+  font-family: ${c.fonts.avenir};
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.3rem;
-  margin-bottom: 2.42rem;
+  text-transform: uppercase;
   transition: .6s;
-  color: #3a3a3a;
+  color: ${c.colors.grey};
   &:hover{
     color: #fff;
-
   }
   &.is-active {
     color: #ffffff;
