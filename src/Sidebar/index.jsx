@@ -5,7 +5,7 @@ import Search from './Search';
 import Nav from './Menu/Nav';
 import Link from './Menu/Link';
 import SubLink from './Menu/SubLink';
-import media from '../styled-components/media';
+import media from '../styled/media';
 
 const Wrapper = styled.aside`
   padding: 0 1.8rem;

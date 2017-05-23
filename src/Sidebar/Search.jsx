@@ -1,8 +1,8 @@
 /* eslint-disable global-require */
 import React from 'react';
 import styled from 'styled-components';
-import media from '../styled-components/media';
-import c from '../styled-components/config';
+import media from '../styled/media';
+import c from '../styled/config';
 
 const Form = styled.form`
   position: relative;
@@ -32,14 +32,14 @@ const Input = styled.input`
   width: 100%;
   padding: 0.9rem;
   padding-left: 5.5rem;
-  color: ${c.colors.searchText};
-  font-family: ${c.fonts.avenir};
+  color: ${c.colors.sidebarGrey};
+  font-family: ${c.fontBody.avenir};
   font-size: 3rem;
   text-transform: uppercase;
   border: none;
-  border-bottom: 0.4rem solid ${c.colors.searchBorder};
+  border-bottom: 0.4rem solid ${c.colors.sidebarGrey};
   &:hover, &:focus{
-    border-bottom: 0.4rem solid ${c.colors.searchBorderHover};
+    border-bottom: 0.4rem solid ${c.colors.sidebarLight};
     transition: ${c.transition};
   }
   background: #000;

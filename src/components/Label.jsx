@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import media from '../styled-components/media';
+import media from '../styled/media';
+import c from '../styled/config';
 
 export default styled.span`
   display: inline-block;
-  font-family: "avenir";
+  font-family: ${c.fontBody.avenir};
   font-size: 1.2rem;
   font-weight: 700;
   color: #fff;
-  background: #ff5c5c;
+  background: ${c.colors.labelBackRed};
   text-transform: uppercase;
   padding: 1rem 2.2rem;
   ${media.lg('min')`

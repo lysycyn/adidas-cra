@@ -9,11 +9,9 @@ import Price from './Header/Price';
 import Title from './Header/Title';
 import BigImage from './Gallery/BigImage';
 import SmallImage from './Gallery/SmallImage';
-import Lines from './Gallery/Lines';
-import More from './Gallery/Button';
 import Description from './Description';
 import ButtonBuyNow from './ButtonBuyNow';
-import media from '../../styled-components/media';
+import media from '../../styled/media';
 
 const Wrapper = styled.section`
   padding: 1.1rem 0;
@@ -131,23 +129,20 @@ export default () => (
           </Row>
           <GalleryWrapper>
             <Row middle="xs">
-              <Col xs={2} md={2} lg={2}>
+              <Col xsOffset={1} xs={2}>
                 <SmallImage src={require('../../assets/img/boot_sm1.jpg')} />
               </Col>
-              <Col xs={2} md={2} lg={2}>
+              <Col xs={2}>
                 <SmallImage src={require('../../assets/img/boot_sm2.jpg')} />
               </Col>
-              <Col xs={2} md={2} lg={2}>
-                <SmallImage src={require('../../assets/img/boot_sm1.jpg')} />
+              <Col xs={2}>
+                <SmallImage src={require('../../assets/img/boot_sm3.jpg')} />
               </Col>
-              <Col xs={2} md={2} lg={2}>
+              <Col xs={2}>
+                <SmallImage src={require('../../assets/img/boot_sm4.jpg')} />
+              </Col>
+              <Col xs={2}>
                 <SmallImage isActive src={require('../../assets/img/boot_sm2.jpg')} />
-              </Col>
-              <Col xs={2} md={2} lg={3}>
-                <Lines />
-              </Col>
-              <Col xs={2} md={2} lg={1}>
-                <More />
               </Col>
             </Row>
           </GalleryWrapper>

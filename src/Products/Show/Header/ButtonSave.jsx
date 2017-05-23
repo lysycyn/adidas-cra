@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from '../../../styled-components/media';
+import media from '../../../styled/media';
+import c from '../../../styled/config';
 
 const Wrapper = styled.button`
   width: 8rem;
   height: 8rem;
-  font-family: "avenir";
+  font-family: ${c.fontBody.avenir};
   font-size: 2rem;
   font-weight: 700;
   color: #fff;

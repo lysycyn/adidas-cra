@@ -1,15 +1,16 @@
 import styled from 'styled-components';
+import c from '../../styled/config';
 
 export default styled.p`
   margin-bottom: 15rem;
-  font-family: "avenir";
+  font-family: ${c.fontBody.avenir};
   font-weight: 400;
   font-size: 4rem;
   line-height: 5rem;
-  color: #d8d8d8;
+  color: ${c.colors.contentLightGrey};
 
   & b {
-    color: #6e6e6e;
+    color: ${c.colors.contentDarkGrey};
     font-weight: 400;
   }
 `;

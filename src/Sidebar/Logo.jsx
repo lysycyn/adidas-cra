@@ -2,7 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import media from '../styled-components/media';
+import media from '../styled/media';
 
 const Image = styled.img`
   display: block;

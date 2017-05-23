@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import media from '../../styled-components/media';
+import media from '../../styled/media';
+import c from '../../styled/config';
 
 const Wrapper = styled.div`
   margin: 0;
@@ -11,13 +12,13 @@ const Wrapper = styled.div`
   right: 0;
   width: 100%;
   padding: 3rem 0;
-  font-family: "avenir";
+  font-family: ${c.fontBody.avenir};
   font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
-  color: #fff;
-  background: linear-gradient(to right, #4949aa, #27275d);
+  color: ${c.colors.btnBuyTextLight};
+  background: ${c.colors.btnBuyBackShow};
   ${media.sm('min')`
     margin-left: 34.5%;
     padding: 2rem 0;

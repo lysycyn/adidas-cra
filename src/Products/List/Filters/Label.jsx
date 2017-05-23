@@ -1,15 +1,16 @@
 import styled from 'styled-components';
-import media from '../../../styled-components/media';
+import media from '../../../styled/media';
+import c from '../../../styled/config';
 
 export default styled.span`
   display: inline-block;
   margin-right: 1.7rem;
-  font-family: "avenir";
+  font-family: ${c.fontBody.avenir};
   font-size: 3rem;
   line-height: 5rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #4d42f8;
+  color: ${c.colors.filtersTextBlue};
   ${media.sm('min')`
     font-size: 2.5rem;
     line-height: 2.5rem;
