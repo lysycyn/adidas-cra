@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Label from '../../components/Label';
-import media from '../../styled-components/media';
+import media from '../../styled/media';
+import c from '../../styled/config';
 
 const OutWrapper = styled.div`
   padding: 0 .2rem;
@@ -13,7 +14,7 @@ const Wrapper = styled.div`
   padding: .5rem;
   margin-bottom: 1.4rem;
   font-size: 0;
-  background: #ebebeb;
+  background: ${c.colors.listGrey};
 `;
 
 const Image = styled.img`
@@ -30,7 +31,7 @@ const BuyBtn = styled(Link)`
   line-height: 3rem;
   color: #000;
   text-align: center;
-  font-family: "avenir";
+  font-family: ${c.fontBody.avenir};
   font-weight: 700;
   background: #fff;
   ${media.lg('min')`
@@ -38,7 +39,7 @@ const BuyBtn = styled(Link)`
     font-size: 2.4rem;
   `}
   ${props => props.isSale && `
-    background: linear-gradient(107deg, #0c09bf, #966dd8);
+    background: ${c.colors.btnBuyBackList};
     color: #fff;
   `}
 `;

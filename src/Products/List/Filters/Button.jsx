@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-import media from '../../../styled-components/media';
+import media from '../../../styled/media';
+import c from '../../../styled/config';
 
 export default styled.button`
   display: inline-block;
   margin-right: 2rem;
   font-size: 3rem;
   line-height: 5rem;
-  font-family: "avenir";
+  font-family: ${c.fontBody.avenir};
   font-weight: 700;
-  color: #ebebeb;
+  color: ${c.colors.listGrey};
   text-transform: uppercase;
   ${props => props.isSize && `
     margin-right: 1rem;
@@ -34,6 +35,6 @@ export default styled.button`
     margin-right: 0;
   }
   ${props => props.isActive && `
-    color: #4d42f8;
+    color: ${c.colors.filtersTextBlue};
   `}
 `;

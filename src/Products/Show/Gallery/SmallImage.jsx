@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import c from '../../../styled/config';
 
 const Wrapper = styled.div`
-  ${props => props.isActive && 'border: 5px solid #e8e8ea;'}
+  ${props => props.isActive && `border: 5px solid ${c.colors.galleryActiveBorder}`}
 `;
 
 const Image = styled.img`

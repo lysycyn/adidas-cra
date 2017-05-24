@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import media from '../../../styled-components/media';
+import media from '../../../styled/media';
 
 export default styled.button`
   display: inline-block;

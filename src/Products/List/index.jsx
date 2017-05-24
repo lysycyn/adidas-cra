@@ -6,7 +6,8 @@ import Card from './Card';
 import Icon from './Filters/Icon';
 import Label from './Filters/Label';
 import Button from './Filters/Button';
-import media from '../../styled-components/media';
+import media from '../../styled/media';
+import c from '../../styled/config';
 
 const Wrapper = styled.section`
   padding: 1.1rem 0;
@@ -34,7 +35,7 @@ const WrapperIcon = styled.div`
   padding-left: .6rem;
   margin-right: 3rem;
   height: 4.5rem;
-  background-color: #ebebeb;
+  background-color: ${c.colors.listGrey};
   ${media.md('max')`
     margin-right: 2.1rem;
   `}
@@ -53,7 +54,7 @@ const Hr = styled.hr`
   width: 100%;
   margin: 0;
   margin-bottom: 1.4rem;
-  background-color: #ebebeb;
+  background-color: ${c.colors.listGrey};
   height: 0.4rem;
   border: none;
   outline: none;

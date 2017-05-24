@@ -1,20 +1,19 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
+import c from '../../styled/config';
 
 export default styled(NavLink)`
   display: inline-block;
   margin: 0 auto;
-  font-size: 3rem;
-  line-height: 3.3rem;
-  margin-bottom: 2.42rem;
+  margin-bottom: 2.4rem;
   text-transform: uppercase;
-  font-family: "andale";
+  font-family: ${c.fontBody.andale};
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 2.7rem;
-  color: #3a3a3a;
+  color: ${c.colors.sidebarGrey};
   &.is-active {
-    color: #ffffff;
+    color: #fff;
     opacity: 1;
   }
 `;

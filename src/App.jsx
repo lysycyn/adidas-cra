@@ -5,7 +5,7 @@ import 'normalize.css';
 import Sidebar from './Sidebar';
 import Show from './Products/Show';
 import List from './Products/List';
-import media from './styled-components/media';
+import media from './styled/media';
 import './styles.css';
 
 const Wrapper = styled.div`
