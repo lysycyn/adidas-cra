@@ -25,29 +25,34 @@ const images = [
     id: 0,
     alt: 'boot-1',
     srcBig: BIG_IMAGE1,
+    srcSet: `${BIG_IMAGE1} 2x ${BIG_IMAGE1} 3x`,
     srcSmall: SM_IMAGE1,
   },
   {
     id: 1,
     alt: 'boot-2',
     srcBig: BIG_IMAGE2,
+    srcSet: `${BIG_IMAGE2} 2x ${BIG_IMAGE2} 3x`,
     srcSmall: SM_IMAGE2,
   },
   {
     id: 2,
     alt: 'boot-3',
     srcBig: BIG_IMAGE3,
+    srcSet: `${BIG_IMAGE3} 2x ${BIG_IMAGE3} 3x`,
     srcSmall: SM_IMAGE3,
   },
   {
     id: 3,
     alt: 'boot-4',
+    srcSet: `${BIG_IMAGE4} 2x ${BIG_IMAGE4} 3x`,
     srcBig: BIG_IMAGE4,
     srcSmall: SM_IMAGE4,
   },
   {
     id: 4,
     alt: 'boot-5',
+    srcSet: `${BIG_IMAGE5} 2x ${BIG_IMAGE5} 3x`,
     srcBig: BIG_IMAGE5,
     srcSmall: SM_IMAGE5,
   },
@@ -69,7 +74,10 @@ class Gallery extends Component {
     return (
       <div>
         <Row center="xs">
-          <BigImage src={images[activeImageIndex].srcBig} />
+          <BigImage
+            src={images[activeImageIndex].srcBig}
+            srcSet={images[activeImageIndex].srcSet}
+          />
         </Row>
         <GalleryWrapper>
           <Row center="xs">
