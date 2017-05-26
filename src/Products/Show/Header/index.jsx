@@ -75,8 +75,13 @@ const Header = ({ onChange, activeColor }) => (
     <RightWrapper>
       <TopWrapper>
         <ButtonsWrapper>
-          {colors.map((c, index) => ( // eslint-disable next-line
-            <ButtonColor key={index} onClick={() => onChange(c)} color={c} />
+          {colors.map((c, index) => ( // eslint-disable-next-line
+            <ButtonColor
+              // eslint-disable-next-line
+              key={index}
+              onClick={() => onChange(c)}
+              color={c}
+            />
           ))}
         </ButtonsWrapper>
         <LabelWrapper>
