@@ -64,22 +64,17 @@ const PriceWrapper = styled.div`
   `}
 `;
 
-const Header = ({ colors, onChange, activeColorIndex }) => (
+const Header = ({ colors, onChange, activeColor }) => (
   <HeaderWrapper>
     <LeftWrapper>
       <Title>Ultra Boost</Title>
-      <ButtonSave color={colors[activeColorIndex]} />
+      <ButtonSave color={activeColor} />
     </LeftWrapper>
     <RightWrapper>
       <TopWrapper>
         <ButtonsWrapper>
-          {colors.map((c, index) => ( // eslint-disable-next-line
-            <ButtonColor
-              // eslint-disable-next-line
-              key={index}
-              onClick={() => onChange(index)}
-              color={c}
-            />
+          {colors.map((c, index) => (
+            <ButtonColor index={index} onClick={() => onChange(index)} color={c} />
           ))}
         </ButtonsWrapper>
         <LabelWrapper>
@@ -87,7 +82,7 @@ const Header = ({ colors, onChange, activeColorIndex }) => (
         </LabelWrapper>
       </TopWrapper>
       <PriceWrapper>
-        <Price color={colors[activeColorIndex]}>170</Price>
+        <Price color={activeColor}>170</Price>
       </PriceWrapper>
     </RightWrapper>
   </HeaderWrapper>

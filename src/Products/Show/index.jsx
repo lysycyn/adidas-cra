@@ -29,11 +29,11 @@ class Product extends Component {
   constructor() {
     super();
     this.state = { activeColorIndex: 0 };
-    this.handeToggleColor = this.handeToggleColor.bind(this);
+    this.handleToggleColor = this.handleToggleColor.bind(this);
   }
 
-  handeToggleColor(index) {
-    this.setState({ activeColorIndex: index });
+  handleToggleColor(activeColorIndex) {
+    this.setState({ activeColorIndex });
   }
 
   render() {
@@ -45,8 +45,8 @@ class Product extends Component {
             <Grid fluid>
               <ProductHeader
                 colors={colors}
-                activeColorIndex={activeColorIndex}
-                onChange={this.handeToggleColor}
+                activeColor={colors[activeColorIndex]}
+                onChange={this.handleToggleColor}
               />
               <Gallery />
               <Description>

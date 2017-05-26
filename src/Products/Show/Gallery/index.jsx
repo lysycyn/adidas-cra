@@ -81,13 +81,13 @@ class Gallery extends Component {
         </Row>
         <GalleryWrapper>
           <Row center="xs">
-            {images.map(img => (
+            {images.map((img, index) => (
               <Col xs={2}>
                 <SmallImage
                   src={img.srcSmall}
                   index={img.id}
                   onChange={this.handleImageChange}
-                  isActive={img.id === activeImageIndex}
+                  isActive={index === activeImageIndex}
                 />
               </Col>
             ))}
