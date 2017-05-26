@@ -10,7 +10,7 @@ const Wrapper = styled.button`
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
-  background: #e3e3e3;
+  background-color: ${props => props.color || '#e3e3e3'};
   text-transform: uppercase;
   border-radius: 4rem;
   ${media.sm('max')`
@@ -18,4 +18,4 @@ const Wrapper = styled.button`
   `}
 `;
 
-export default () => <Wrapper>Save</Wrapper>;
+export default props => <Wrapper color={props.color}>Save</Wrapper>;
