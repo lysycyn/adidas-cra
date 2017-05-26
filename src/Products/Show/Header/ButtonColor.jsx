@@ -13,5 +13,5 @@ export default styled.button`
     height: 1.8rem;
     border-radius: .9rem;
   `}
-  background: ${props => props.color};
+  background-color: ${props => props.color};
 `;

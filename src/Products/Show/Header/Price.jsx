@@ -6,7 +6,7 @@ export default styled.h2`
   font-family: ${c.fontBody.avenir};
   font-weight: 700;
   font-size: 10rem;
-  color: #e2e2e2;
+  color: ${props => props.color || '#e2e2e2'};
   &:after{
     content: "$";
   }

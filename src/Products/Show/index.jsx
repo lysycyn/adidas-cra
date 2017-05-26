@@ -1,14 +1,8 @@
-/* eslint-disable global-require */
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import Label from '../../components/Label';
-import ButtonColor from './Header/ButtonColor';
-import ButtonSave from './Header/ButtonSave';
-import Price from './Header/Price';
-import Title from './Header/Title';
-import BigImage from './Gallery/BigImage';
-import SmallImage from './Gallery/SmallImage';
+import { Grid } from 'react-flexbox-grid';
+import Gallery from './Gallery';
+import ProductHeader from './Header';
 import Description from './Description';
 import ButtonBuyNow from './ButtonBuyNow';
 import media from '../../styled/media';
@@ -29,131 +23,44 @@ const Header = styled.div`
   margin-bottom: 3rem;
 `;
 
-const GalleryWrapper = styled.div`
-  margin-bottom: 3rem;
-`;
+const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
 
-const HeaderWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  ${media.sm('max')`
-    flex-direction: column;
-  `}
-`;
+class Product extends Component {
+  constructor() {
+    super();
+    this.state = { activeColorIndex: 0 };
+    this.handleToggleColor = this.handleToggleColor.bind(this);
+  }
 
-const LeftWrapper = styled.div`
-  flex-basis: 25%;
-  ${media.sm('max')`
-    flex-basis: 100%;
-  `}
-`;
+  handleToggleColor(activeColorIndex) {
+    this.setState({ activeColorIndex });
+  }
 
-const RightWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  ${media.sm('max')`
-    width: 100%;
-    justify-content: space-between;
-  `}
-`;
+  render() {
+    const { activeColorIndex } = this.state;
+    return (
+      <Wrapper>
+        <Content>
+          <Header>
+            <Grid fluid>
+              <ProductHeader
+                colors={colors}
+                activeColor={colors[activeColorIndex]}
+                onChange={this.handleToggleColor}
+              />
+              <Gallery />
+              <Description>
+                <b>Adidas</b> is a German multinational corporation,
+                headquartered in Herzogenaurach, Germany, that designs and
+                manufactures shoes, clothing and accessories.
+              </Description>
+            </Grid>
+          </Header>
+        </Content>
+        <ButtonBuyNow />
+      </Wrapper>
+    );
+  }
+}
 
-const TopWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  ${media.sm('max')`
-    justify-content: space-between;
-    order: 2;
-  `}
-`;
-
-const ButtonsWrapper = styled.div`
-  ${media.sm('max')`
-    order: 2;
-  `}
-`;
-
-const LabelWrapper = styled.div`
-  margin-left: 2rem;
-  ${media.sm('max')`
-    margin-left: 0;
-    order: 1;
-  `}
-`;
-
-const PriceWrapper = styled.div`
-  ${media.sm('max')`
-    order: 1;
-    padding-bottom: 1.5rem;
-  `}
-`;
-
-export default () => (
-  <Wrapper>
-    <Content>
-      <Header>
-        <Grid fluid>
-          <HeaderWrapper>
-            <LeftWrapper>
-              <Title>Ultra Boost</Title>
-              <ButtonSave />
-            </LeftWrapper>
-            <RightWrapper>
-              <TopWrapper>
-                <ButtonsWrapper>
-                  <ButtonColor color="#c5c5c5" />
-                  <ButtonColor color="#4d87ca" />
-                  <ButtonColor color="#4a4a4a" />
-                  <ButtonColor color="#e0e0e0" />
-                </ButtonsWrapper>
-                <LabelWrapper>
-                  <Label>Sale</Label>
-                </LabelWrapper>
-              </TopWrapper>
-              <PriceWrapper>
-                <Price>170</Price>
-              </PriceWrapper>
-            </RightWrapper>
-          </HeaderWrapper>
-          <Row center="lg">
-            <BigImage
-              src={require('../../assets/img/boot_big.jpg')}
-              srcSet={`
-                ${require('../../assets/img/boot_big@2x.jpg')} 2x
-                ${require('../../assets/img/boot_big@3x.jpg')} 3x
-              `}
-              alt="bigphoto"
-            />
-          </Row>
-          <GalleryWrapper>
-            <Row middle="xs">
-              <Col xsOffset={1} xs={2}>
-                <SmallImage src={require('../../assets/img/boot_sm1.jpg')} />
-              </Col>
-              <Col xs={2}>
-                <SmallImage src={require('../../assets/img/boot_sm2.jpg')} />
-              </Col>
-              <Col xs={2}>
-                <SmallImage src={require('../../assets/img/boot_sm3.jpg')} />
-              </Col>
-              <Col xs={2}>
-                <SmallImage src={require('../../assets/img/boot_sm4.jpg')} />
-              </Col>
-              <Col xs={2}>
-                <SmallImage isActive src={require('../../assets/img/boot_sm2.jpg')} />
-              </Col>
-            </Row>
-          </GalleryWrapper>
-          <Description>
-            <b>Adidas</b> is a German multinational corporation,
-            headquartered in Herzogenaurach, Germany, that designs and
-            manufactures shoes, clothing and accessories.
-          </Description>
-        </Grid>
-      </Header>
-    </Content>
-    <ButtonBuyNow />
-  </Wrapper>
-);
+export default Product;
