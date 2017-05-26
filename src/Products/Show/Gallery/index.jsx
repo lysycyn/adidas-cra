@@ -22,31 +22,31 @@ const GalleryWrapper = styled.div`
 
 const images = [
   {
-    id: 1,
+    id: 0,
     alt: 'boot-1',
     srcBig: BIG_IMAGE1,
     srcSmall: SM_IMAGE1,
   },
   {
-    id: 2,
+    id: 1,
     alt: 'boot-2',
     srcBig: BIG_IMAGE2,
     srcSmall: SM_IMAGE2,
   },
   {
-    id: 3,
+    id: 2,
     alt: 'boot-3',
     srcBig: BIG_IMAGE3,
     srcSmall: SM_IMAGE3,
   },
   {
-    id: 4,
+    id: 3,
     alt: 'boot-4',
     srcBig: BIG_IMAGE4,
     srcSmall: SM_IMAGE4,
   },
   {
-    id: 5,
+    id: 4,
     alt: 'boot-5',
     srcBig: BIG_IMAGE5,
     srcSmall: SM_IMAGE5,
@@ -56,18 +56,20 @@ const images = [
 class Gallery extends Component {
   constructor() {
     super();
-    this.state = { activeImageIndex: '1' };
-    this.onChangeImage = this.onChangeImage.bind(this);
+    this.state = { activeImageIndex: 0 };
+    this.handleImageChange = this.handleImageChange.bind(this);
   }
-  onChangeImage(activeImageIndex) {
+
+  handleImageChange(activeImageIndex) {
     this.setState({ activeImageIndex });
   }
+
   render() {
     const { activeImageIndex } = this.state;
     return (
       <div>
         <Row center="xs">
-          <BigImage src={images[activeImageIndex - 1].srcBig || BIG_IMAGE1} />
+          <BigImage src={images[activeImageIndex].srcBig} />
         </Row>
         <GalleryWrapper>
           <Row center="xs">
@@ -76,7 +78,7 @@ class Gallery extends Component {
                 <SmallImage
                   src={img.srcSmall}
                   index={img.id}
-                  onChange={this.onChangeImage}
+                  onChange={this.handleImageChange}
                   isActive={img.id === activeImageIndex}
                 />
               </Col>

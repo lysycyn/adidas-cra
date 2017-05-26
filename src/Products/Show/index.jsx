@@ -23,23 +23,31 @@ const Header = styled.div`
   margin-bottom: 3rem;
 `;
 
+const colors = ['#c5c5c5', '#4d87ca', '#4a4a4a', '#e0e0e0'];
+
 class Product extends Component {
   constructor() {
     super();
-    this.state = { activeColor: '' };
-    this.toggleColor = this.toggleColor.bind(this);
+    this.state = { activeColorIndex: 0 };
+    this.handeToggleColor = this.handeToggleColor.bind(this);
   }
-  toggleColor(color) {
-    this.setState({ activeColor: color });
+
+  handeToggleColor(index) {
+    this.setState({ activeColorIndex: index });
   }
+
   render() {
-    const { activeColor } = this.state;
+    const { activeColorIndex } = this.state;
     return (
       <Wrapper>
         <Content>
           <Header>
             <Grid fluid>
-              <ProductHeader activeColor={activeColor} onChange={this.toggleColor} />
+              <ProductHeader
+                colors={colors}
+                activeColorIndex={activeColorIndex}
+                onChange={this.handeToggleColor}
+              />
               <Gallery />
               <Description>
                 <b>Adidas</b> is a German multinational corporation,
