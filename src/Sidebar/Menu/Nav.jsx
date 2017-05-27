@@ -1,6 +1,8 @@
+import React, { Component } from 'react';
 import styled from 'styled-components';
+import Button from './Button';
 
-export default styled.nav`
+const Wrapper = styled.nav`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -11,3 +13,32 @@ export default styled.nav`
     display: flex;
   `}
 `;
+
+class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isOpen: false };
+    this.handleToggleMenu = this.handleToggleMenu.bind(this);
+  }
+
+  handleToggleMenu() {
+    this.setState(oldState => ({
+      isOpen: !oldState.isOpen,
+    }));
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <Button
+          onChange={this.handleToggleMenu}
+          isOpen={this.state.isOpen}
+          Title={this.props.Title}
+        />
+        {this.state.isOpen && this.props.children}
+      </Wrapper>
+    );
+  }
+}
+
+export default Nav;

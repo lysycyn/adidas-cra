@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
 import Search from './Search';
-import Nav from './Menu/Nav';
-import Link from './Menu/Link';
-import SubLink from './Menu/SubLink';
+import Menu from './Menu';
+import Burger from './Burger';
 import media from '../styled/media';
+import c from '../styled/config';
 
 const Wrapper = styled.aside`
+  position: realtive;
   padding: 0 1.8rem;
   padding-top: 2.6rem;
   ${media.lg('min')`
@@ -25,27 +26,47 @@ const Wrapper = styled.aside`
   background: #000;
 `;
 
-export const HideMobile = styled.div`
+const HeaderWrapper = styled.div`
   ${media.sm('max')`
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: middle;
   `}
 `;
 
-export default () => (
-  <Wrapper>
-    <Logo />
-    <HideMobile>
-      <Search />
-      <Nav>
-        <Link activeClassName="is-active" isSubNav to="/">Sports</Link>
-        <Nav isSub>
-          <SubLink to="#">Shoes</SubLink>
-          <SubLink to="#">Clothing</SubLink>
-          <SubLink to="#">Accesories</SubLink>
-        </Nav>
-        <Link to="#">Brands</Link>
-        <Link to="#">Micoash</Link>
-      </Nav>
-    </HideMobile>
-  </Wrapper>
-);
+export const MenuWrapper = styled.div`
+  ${media.sm('max')`
+    transition: ${c.transition};
+    display: none;
+    display: ${props => props.isMenuOpen && 'block'};
+  `}
+`;
+
+class Sidebar extends Component {
+  constructor() {
+    super();
+    this.state = { isMenuOpen: false };
+    this.handleToggleMenu = this.handleToggleMenu.bind(this);
+  }
+
+  handleToggleMenu() {
+    this.setState(oldState => ({ isMenuOpen: !oldState.isMenuOpen }));
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <HeaderWrapper>
+          <Logo />
+          <Burger onChange={this.handleToggleMenu} />
+        </HeaderWrapper>
+        <MenuWrapper isMenuOpen={this.state.isMenuOpen}>
+          <Search />
+          <Menu />
+        </MenuWrapper>
+      </Wrapper>
+    );
+  }
+}
+
+export default Sidebar;
