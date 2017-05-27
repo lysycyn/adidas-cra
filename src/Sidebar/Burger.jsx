@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import media from '../styled/media';
-import BURGER from './icon-burger.svg';
+import iconBurger from './icon-burger.svg';
 
 const Burger = styled.img`
   ${media.sm('min')`
@@ -9,4 +9,4 @@ const Burger = styled.img`
   `}
 `;
 
-export default ({ onChange }) => <Burger onClick={onChange} src={BURGER} />;
+export default ({ onChange }) => <Burger onClick={onChange} src={iconBurger} />;

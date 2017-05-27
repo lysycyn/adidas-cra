@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import c from '../../styled/config';
 import ARROW from './icon-arrow.svg';
 
-const Wrapper = styled.button`
+const Button = styled.button`
   position: relative;
   display: inline-block;
   margin: 0 auto;
@@ -42,9 +42,9 @@ const Arrow = styled.span`
   transition: ${c.transition};
 `;
 
-export default ({ onChange, isOpen, Title }) => (
-  <Wrapper onClick={onChange} isOpen={isOpen}>
-    {Title}
+export default ({ onChange, isOpen, children }) => (
+  <Button onClick={onChange} isOpen={isOpen}>
+    {children}
     <Arrow src={ARROW} isOpen={isOpen} />
-  </Wrapper>
+  </Button>
 );

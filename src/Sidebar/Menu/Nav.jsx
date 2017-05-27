@@ -30,11 +30,9 @@ class Nav extends Component {
   render() {
     return (
       <Wrapper>
-        <Button
-          onChange={this.handleToggleMenu}
-          isOpen={this.state.isOpen}
-          Title={this.props.Title}
-        />
+        <Button onChange={this.handleToggleMenu} isOpen={this.state.isOpen}>
+          {this.props.title}
+        </Button>
         {this.state.isOpen && this.props.children}
       </Wrapper>
     );
