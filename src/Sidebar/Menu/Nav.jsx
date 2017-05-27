@@ -22,8 +22,8 @@ class Nav extends Component {
   }
 
   handleToggleMenu() {
-    this.setState(oldState => ({
-      isOpen: !oldState.isOpen,
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen,
     }));
   }
 

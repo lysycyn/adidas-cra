@@ -50,7 +50,7 @@ class Sidebar extends Component {
   }
 
   handleToggleMenu() {
-    this.setState(oldState => ({ isMenuOpen: !oldState.isMenuOpen }));
+    this.setState(prevState => ({ isMenuOpen: !prevState.isMenuOpen }));
   }
 
   render() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import c from '../../styled/config';
-import ARROW from './icon-arrow.svg';
+import iconArrow from './icon-arrow.svg';
 
 const Button = styled.button`
   position: relative;
@@ -48,6 +48,6 @@ const Arrow = styled.span`
 export default ({ onChange, isOpen, children }) => (
   <Button onClick={onChange} isOpen={isOpen}>
     {children}
-    <Arrow src={ARROW} isOpen={isOpen} />
+    <Arrow src={iconArrow} isOpen={isOpen} />
   </Button>
 );
