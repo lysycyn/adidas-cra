@@ -16,9 +16,14 @@ const Button = styled.button`
   text-transform: uppercase;
   transition: ${c.transition};
   color: ${c.colors.sidebarGrey};
-  ${props => props.isOpen && `
+  cursor: pointer;
+  &:hover{
     color: ${c.colors.sidebarLight};
-  `}
+  }
+  &:hover span{
+    border-right: .4rem solid ${c.colors.sidebarLight};
+    border-bottom: .4rem solid ${c.colors.sidebarLight};
+  }
 `;
 
 const Arrow = styled.span`
@@ -36,8 +41,6 @@ const Arrow = styled.span`
   ${props => props.isOpen && `
     top: 1.2rem;
     transform: rotate(225deg);
-    border-right: .4rem solid ${c.colors.sidebarLight};
-    border-bottom: .4rem solid ${c.colors.sidebarLight};
   `}
   transition: ${c.transition};
 `;
