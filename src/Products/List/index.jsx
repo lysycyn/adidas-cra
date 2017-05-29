@@ -11,6 +11,7 @@ import c from '../../styled/config';
 
 const Wrapper = styled.section`
   padding: 1.1rem 0;
+  flex-basis: 100%;
   ${media.lg('min')`
     padding: 1.1rem 0;
   `}

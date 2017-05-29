@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Button from './Button';
 
 const Wrapper = styled.nav`
-  display: flex;
-  flex-direction: column;
   text-align: center;
   ${props => props.isSub && `
     padding-top: 0.25rem;
@@ -12,6 +10,11 @@ const Wrapper = styled.nav`
     margin-bottom: 2.25rem;
     display: flex;
   `}
+`;
+
+const LinksWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 class Nav extends Component {
@@ -33,7 +36,9 @@ class Nav extends Component {
         <Button onChange={this.handleToggleMenu} isOpen={this.state.isOpen}>
           {this.props.title}
         </Button>
-        {this.state.isOpen && this.props.children}
+        <LinksWrapper>
+          {this.state.isOpen && this.props.children}
+        </LinksWrapper>
       </Wrapper>
     );
   }

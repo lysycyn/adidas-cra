@@ -7,39 +7,33 @@ const Button = styled.button`
   position: relative;
   display: inline-block;
   margin: 0 auto;
-  padding-right: 2.75rem;
-  margin-bottom: 2.4rem;
+  margin-top: 1.7rem;
+  padding-right: 2rem;
+  margin-bottom: 1.5rem;
   font-family: ${c.fontBody.avenir};
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.3rem;
   text-transform: uppercase;
   transition: ${c.transition};
-  color: ${c.colors.sidebarGrey};
+  color: ${c.colors.sidebarLight};
   cursor: pointer;
-  &:hover{
-    color: ${c.colors.sidebarLight};
-  }
-  &:hover span{
-    border-right: .4rem solid ${c.colors.sidebarLight};
-    border-bottom: .4rem solid ${c.colors.sidebarLight};
-  }
 `;
 
 const Arrow = styled.span`
   position: absolute;
   display: block;
   content: "";
-  top: .5rem;
+  top: .7rem;
   right: 0;
-  height: 1.3rem;
-  width: 1.3rem;
-  border-right: .4rem solid ${c.colors.sidebarGrey};
-  border-bottom: .4rem solid ${c.colors.sidebarGrey};
+  height: 1rem;
+  width: 1rem;
+  border-right: .3rem solid ${c.colors.sidebarLight};
+  border-bottom: .3rem solid ${c.colors.sidebarLight};
   transform: rotate(45deg);
 
   ${props => props.isOpen && `
-    top: 1.2rem;
+    top: 1.5rem;
     transform: rotate(225deg);
   `}
   transition: ${c.transition};

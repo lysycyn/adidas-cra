@@ -17,9 +17,9 @@ const Form = styled.form`
       position: absolute;
       content: "";
       display: block;
-      width: 3.5rem;
-      height: 3.75rem;
-      top: .5rem;
+      width: 3rem;
+      height: 3.25rem;
+      top: .7rem;
       left: 1rem;
       background-image: url(${require('./icon-search.svg')});
       background-size: cover;
@@ -37,12 +37,12 @@ const Input = styled.input`
   padding-left: 5.5rem;
   color: ${c.colors.sidebarGrey};
   font-family: ${c.fontBody.avenir};
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
   border: none;
-  border-bottom: 0.4rem solid ${c.colors.sidebarGrey};
+  border-bottom: 0.3rem solid ${c.colors.sidebarGrey};
   &:hover, &:focus{
-    border-bottom: 0.4rem solid ${c.colors.sidebarLight};
+    border-bottom: 0.3rem solid ${c.colors.sidebarLight};
     transition: ${c.transition};
   }
   background: #000;
