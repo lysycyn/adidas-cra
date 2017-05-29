@@ -26,6 +26,9 @@ const Form = styled.form`
       background-repeat: no-repeat;
     }
   `}
+  ${media.sm('max')`
+    display: none;
+  `}
 `;
 const Input = styled.input`
   display: block;
