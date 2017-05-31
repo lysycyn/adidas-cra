@@ -19,12 +19,16 @@
     "husky": "^0.13.3",
     "react-scripts": "1.0.0"
   },
+  "now": {
+    "alias": "lysycyn-adidas"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
-    "prepush": "npm run lint"
+    "prepush": "npm run lint",
+    "deploy": "now build",
   }
 }
