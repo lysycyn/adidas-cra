@@ -29,6 +29,6 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
     "prepush": "npm run lint",
-    "deploy": "now build",
+    "deploy": "now build"
   }
 }
