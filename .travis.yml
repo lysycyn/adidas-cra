@@ -7,8 +7,14 @@ install:
   - npm install
 script:
   - npm run lint
+<<<<<<< HEAD
 after_success:
   - npm run deploy
 # deploy:
 #   - provider: script
 #   - script: npm run deploy
+=======
+deploy:
+  - provider: script
+  - script: npm run deploy
+>>>>>>> ac08453e2996241f2309fce5a3266f06c9562fa7
