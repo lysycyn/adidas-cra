@@ -28,7 +28,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
-    "deploy": "now --public --token=$NOW_LOGIN_TOKEN && now ln --token=$NOW_LOGIN_TOKEN",
+    "deploy": "now build --public --token=$NOW_LOGIN_TOKEN && now ln --token=$NOW_LOGIN_TOKEN",
     "prepush": "npm run lint"
   }
 }
