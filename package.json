@@ -19,12 +19,17 @@
     "husky": "^0.13.3",
     "react-scripts": "1.0.0"
   },
+  "now": {
+    "alias": "lysycyn-adidas",
+    "name": "build"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext=js,jsx",
+    "deploy": "npm run build && now build --public --token=$NOW_LOGIN_TOKEN && now ln --token=$NOW_LOGIN_TOKEN",
     "prepush": "npm run lint"
   }
 }
