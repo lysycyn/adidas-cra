@@ -20,7 +20,8 @@
     "react-scripts": "1.0.0"
   },
   "now": {
-    "alias": "slysycyn-adidas-shop"
+    "alias": "slysycyn-adidas-shop",
+    "name": "build"
   },
   "scripts": {
     "start": "react-scripts start",
