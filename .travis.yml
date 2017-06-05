@@ -7,10 +7,8 @@ install:
   - npm install
 script:
   - npm run lint
-before_deploy:
-  - npm run deploy
-# deploy:
-#   - provider: script
-#   - script: "npm run deploy"
-#   - on:
-#       branch: feat/4-deploy
+deploy:
+  - provider: script
+  - script: "npm run deploy"
+  - on:
+      all_branches: true
