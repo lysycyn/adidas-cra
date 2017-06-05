@@ -1,10 +1,14 @@
 language: node_js
 node_js:
   - "node"
+before_install:
+  - npm install -g now
 install:
   - npm install
 script:
   - npm run lint
 deploy:
-  provider: script
-  script: "now /build"
+  - provider: script
+  - script: "npm run deploy"
+  - on:
+      all_branches: true
