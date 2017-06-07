@@ -1,11 +1,13 @@
 /* eslint-disable global-require */
-import React from 'react';
+import 'whatwg-fetch';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
 import Card from './Card';
 import Icon from './Filters/Icon';
 import Label from './Filters/Label';
 import Button from './Filters/Button';
+import { ApiLink, ImageLink } from '../../constants/Links';
 import media from '../../styled/media';
 import c from '../../styled/config';
 
@@ -65,79 +67,70 @@ const WidthWrapper = styled.div`
   padding: 0 1.3rem;
 `;
 
-export default () => (
-  <Wrapper>
-    <WidthWrapper>
-      <WrapperFilter>
-        <WrapperIcon>
-          <Icon />
-        </WrapperIcon>
-        <WrapperGender>
-          <Button isActive>Man</Button>
-          <Button>Women</Button>
-        </WrapperGender>
-        <WrapperSize>
-          <Label>Size</Label>
-          <Button isSize>36</Button>
-          <Button isSize>37</Button>
-          <Button isSize>38</Button>
-          <Button isSize>39</Button>
-          <Button isSize isActive>40</Button>
-          <Button isSize>41</Button>
-          <Button isSize>42</Button>
-        </WrapperSize>
-      </WrapperFilter>
-    </WidthWrapper>
-    <Hr />
-    <WidthWrapper>
-      <Row>
-        <Col xs={12} sm={6} md={4} lg={3}>
-          <Card
-            isSale
-            src={require('../../assets/img/boot1.jpg')}
-            price="170$"
-            to="/products/ultraboost"
-          />
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3}>
-          <Card
-            src={require('../../assets/img/boot2.jpg')}
-            price="170$"
-            to="/products/ultraboost"
-          />
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3}>
-          <Card
-            isSale
-            src={require('../../assets/img/boot1.jpg')}
-            price="170$"
-            to="/products/ultraboost"
-          />
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3}>
-          <Card
-            src={require('../../assets/img/boot2.jpg')}
-            price="170$"
-            to="/products/ultraboost"
-          />
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3}>
-          <Card
-            isSale
-            src={require('../../assets/img/boot2.jpg')}
-            price="170$"
-            to="/products/ultraboost"
-          />
-        </Col>
-        <Col xs={12} sm={6} md={4} lg={3}>
-          <Card
-            isSale
-            src={require('../../assets/img/boot1.jpg')}
-            price="170$"
-            to="/products/ultraboost"
-          />
-        </Col>
-      </Row>
-    </WidthWrapper>
-  </Wrapper>
-);
+class List extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { items: [] };
+  }
+
+  componentDidMount() {
+    this.fetchData(this.props);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.fetchData(nextProps);
+  }
+
+  fetchData(props) {
+    const { group, type } = props.match.params;
+    fetch(`${ApiLink}v1/products/${group}/${type}`)
+      .then(response => response.json())
+      .then(data => this.setState({ items: data.items }));
+  }
+
+  render() {
+    return (
+      <Wrapper>
+        <WidthWrapper>
+          <WrapperFilter>
+            <WrapperIcon>
+              <Icon />
+            </WrapperIcon>
+            <WrapperGender>
+              <Button isActive>Man</Button>
+              <Button>Women</Button>
+            </WrapperGender>
+            <WrapperSize>
+              <Label>Size</Label>
+              <Button isSize>36</Button>
+              <Button isSize>37</Button>
+              <Button isSize>38</Button>
+              <Button isSize>39</Button>
+              <Button isSize isActive>40</Button>
+              <Button isSize>41</Button>
+              <Button isSize>42</Button>
+            </WrapperSize>
+          </WrapperFilter>
+        </WidthWrapper>
+        <Hr />
+        <WidthWrapper>
+          <Row>
+            {this.state.items.map(item => (
+              <Col xs={12} sm={6} md={4} lg={3} key={item.key}>
+                <Card
+                  isSale
+                  src={ImageLink(item.images[0].id, item.images[0].fileName, 256)}
+                  price={item.price / 100}
+                  currency={item.currency}
+                  to={`${this.props.match.url}/${item.id}`}
+                />
+              </Col>
+            ))}
+          </Row>
+        </WidthWrapper>
+      </Wrapper>
+    );
+  }
+}
+
+export default List;
