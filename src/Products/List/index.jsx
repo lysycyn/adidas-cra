@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
-import 'whatwg-fetch';
+/* eslint-disable arrow-parens */
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from 'react-flexbox-grid';
@@ -7,9 +7,10 @@ import Card from './Card';
 import Icon from './Filters/Icon';
 import Label from './Filters/Label';
 import Button from './Filters/Button';
-import { ApiLink, ImageLink } from '../../constants/Links';
+import { imageLink } from '../../constants/Links';
 import media from '../../styled/media';
 import c from '../../styled/config';
+import get from '../../api';
 
 const Wrapper = styled.section`
   padding: 1.1rem 0;
@@ -70,7 +71,7 @@ const WidthWrapper = styled.div`
 class List extends Component {
   constructor(props) {
     super(props);
-    this.state = { items: [] };
+    this.state = { cards: [] };
   }
 
   componentDidMount() {
@@ -83,9 +84,7 @@ class List extends Component {
 
   fetchData(props) {
     const { group, type } = props.match.params;
-    fetch(`${ApiLink}v1/products/${group}/${type}`)
-      .then(response => response.json())
-      .then(data => this.setState({ items: data.items }));
+    get(`v1/products/${group}/${type}`).then(data => this.setState({ cards: data.items }));
   }
 
   render() {
@@ -115,17 +114,20 @@ class List extends Component {
         <Hr />
         <WidthWrapper>
           <Row>
-            {this.state.items.map(item => (
-              <Col xs={12} sm={6} md={4} lg={3} key={item.key}>
-                <Card
-                  isSale
-                  src={ImageLink(item.images[0].id, item.images[0].fileName, 256)}
-                  price={item.price / 100}
-                  currency={item.currency}
-                  to={`${this.props.match.url}/${item.id}`}
-                />
-              </Col>
-            ))}
+            {this.state.cards.map(card => {
+              const saleValue = Math.random();
+              return (
+                <Col xs={12} sm={6} md={4} lg={3} key={card.id}>
+                  <Card
+                    isSale={saleValue}
+                    src={imageLink(card.images[0].id, card.images[0].fileName, 256)}
+                    price={card.price / 100}
+                    currency={card.currency}
+                    to={`${this.props.match.url}/${card.id}`}
+                  />
+                </Col>
+              );
+            })}
           </Row>
         </WidthWrapper>
       </Wrapper>

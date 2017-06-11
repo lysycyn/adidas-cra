@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Label from '../../components/Label';
 import media from '../../styled/media';
 import c from '../../styled/config';
+import SALE from '../../constants/Sale';
 
 const OutWrapper = styled.div`
   padding: 0 .2rem;
@@ -38,7 +39,7 @@ const BuyBtn = styled(Link)`
     padding: 2rem;
     font-size: 2.4rem;
   `}
-  ${props => props.isSale && `
+  ${props => props.isSale > 0.7 && `
     background: ${c.colors.btnBuyBackList};
     color: #fff;
   `}
@@ -53,7 +54,7 @@ const SaleWrapper = styled.div`
 export default props => (
   <OutWrapper>
     <Wrapper>
-      ${props.isSale &&
+      ${props.isSale > SALE &&
         <SaleWrapper>
           <Label>Sale</Label>
         </SaleWrapper>}

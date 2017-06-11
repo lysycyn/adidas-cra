@@ -21,7 +21,7 @@ export default () => (
     <Wrapper>
       <Sidebar />
       <Switch>
-        <Route path="/products/:group/:type" component={List} />
+        <Route exact path="/products/:group/:type" component={List} />
         <Route path="/products/:group/:type/:id" component={Show} />
         <Redirect from="/" to="/products/running/shoes" />
       </Switch>
