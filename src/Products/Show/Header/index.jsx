@@ -3,9 +3,11 @@ import styled from 'styled-components';
 import media from '../../../styled/media';
 import ButtonColor from './ButtonColor';
 import ButtonSave from './ButtonSave';
-import Price from './Price';
+import PriceWrapper from './Price';
 import Title from './Title';
 import Label from '../../../components/Label';
+import { SALE } from '../../../constants';
+import Price from '../../../components/FormattedPrice';
 
 const HeaderWrapper = styled.div`
   display: flex;
@@ -17,7 +19,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const LeftWrapper = styled.div`
-  flex-basis: 25%;
+  flex-basis: 35%;
   ${media.sm('max')`
     flex-basis: 100%;
   `}
@@ -57,17 +59,17 @@ const LabelWrapper = styled.div`
   `}
 `;
 
-const PriceWrapper = styled.div`
+const BottomWrapper = styled.div`
   ${media.sm('max')`
     order: 1;
     padding-bottom: 1.5rem;
   `}
 `;
 
-const Header = ({ colors, onChange, activeColor }) => (
+const Header = ({ colors, onChange, activeColor, title, isSale, price, currency }) => (
   <HeaderWrapper>
     <LeftWrapper>
-      <Title>Ultra Boost</Title>
+      <Title>{title}</Title>
       <ButtonSave color={activeColor} />
     </LeftWrapper>
     <RightWrapper>
@@ -77,13 +79,16 @@ const Header = ({ colors, onChange, activeColor }) => (
             <ButtonColor index={index} onClick={() => onChange(index)} color={c} />
           ))}
         </ButtonsWrapper>
-        <LabelWrapper>
-          <Label>Sale</Label>
-        </LabelWrapper>
+        {isSale > SALE &&
+          <LabelWrapper>
+            <Label>Sale</Label>
+          </LabelWrapper>}
       </TopWrapper>
-      <PriceWrapper>
-        <Price color={activeColor}>170</Price>
-      </PriceWrapper>
+      <BottomWrapper>
+        <PriceWrapper color={activeColor}>
+          <Price currency={currency}>{price}</Price>
+        </PriceWrapper>
+      </BottomWrapper>
     </RightWrapper>
   </HeaderWrapper>
 );
