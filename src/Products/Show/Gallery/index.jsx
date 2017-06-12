@@ -6,6 +6,7 @@ import BigImage from './BigImage';
 import { imageLink } from '../../../constants/Links';
 
 const GalleryWrapper = styled.div`
+  padding-top: 2rem;
   margin-bottom: 3rem;
 `;
 

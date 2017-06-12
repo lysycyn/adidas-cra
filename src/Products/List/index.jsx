@@ -121,7 +121,7 @@ class List extends Component {
                   <Card
                     isSale={saleValue}
                     src={imageLink(card.images[0].id, card.images[0].fileName, 256)}
-                    price={card.price / 100}
+                    price={card.price}
                     currency={card.currency}
                     to={`${this.props.match.url}/${card.id}`}
                   />

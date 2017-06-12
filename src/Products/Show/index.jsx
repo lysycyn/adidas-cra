@@ -59,6 +59,8 @@ class Product extends Component {
                 activeColor={colors[activeColorIndex]}
                 onChange={this.handleToggleColor}
                 title={product.title}
+                price={product.price}
+                currency={product.currency}
               />
               <Gallery images={product.images} />
               <Description>

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Label from '../../components/Label';
 import media from '../../styled/media';
 import c from '../../styled/config';
+import Price from '../../components/FormattedPrice';
 import SALE from '../../constants/Sale';
 
 const OutWrapper = styled.div`
@@ -59,7 +60,9 @@ export default props => (
           <Label>Sale</Label>
         </SaleWrapper>}
       <Image src={props.src} />
-      <BuyBtn isSale={props.isSale} to={props.to}>{props.price}</BuyBtn>
+      <BuyBtn isSale={props.isSale} to={props.to}>
+        <Price currency={props.currency}>{props.price}</Price>
+      </BuyBtn>
     </Wrapper>
   </OutWrapper>
 );

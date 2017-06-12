@@ -7,7 +7,4 @@ export default styled.h2`
   font-weight: 700;
   font-size: 10rem;
   color: ${props => props.color || '#e2e2e2'};
-  &:after{
-    content: "$";
-  }
 `;
