@@ -5,7 +5,7 @@ import Label from '../../components/Label';
 import media from '../../styled/media';
 import c from '../../styled/config';
 import Price from '../../components/FormattedPrice';
-import SALE from '../../constants/Sale';
+import { SALE } from '../../constants';
 
 const OutWrapper = styled.div`
   padding: 0 .2rem;

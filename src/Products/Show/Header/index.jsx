@@ -6,7 +6,7 @@ import ButtonSave from './ButtonSave';
 import PriceWrapper from './Price';
 import Title from './Title';
 import Label from '../../../components/Label';
-import SALE from '../../../constants/Sale';
+import { SALE } from '../../../constants';
 import Price from '../../../components/FormattedPrice';
 
 const HeaderWrapper = styled.div`

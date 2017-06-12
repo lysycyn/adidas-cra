@@ -3,7 +3,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import styled from 'styled-components';
 import SmallImage from './SmallImage';
 import BigImage from './BigImage';
-import { imageLink } from '../../../constants/Links';
+import { imageLink } from '../../../constants';
 
 const GalleryWrapper = styled.div`
   padding-top: 2rem;
@@ -22,7 +22,7 @@ class Gallery extends Component {
   }
 
   render() {
-    const activeIndex = this.state.activeImageIndex;
+    const { activeImageIndex } = this.state;
     const images = this.props.images;
     return (
       <div>
@@ -30,7 +30,7 @@ class Gallery extends Component {
           <div>
             <Row center="xs">
               <BigImage
-                src={imageLink(images[activeIndex].id, images[activeIndex].fileName, 512)}
+                src={imageLink(images[activeImageIndex].id, images[activeImageIndex].fileName, 512)}
               />
             </Row>
             <GalleryWrapper>
@@ -41,7 +41,7 @@ class Gallery extends Component {
                       src={imageLink(img.id, img.fileName, 64)}
                       index={index}
                       onChange={this.handleImageChange}
-                      isActive={index === activeIndex}
+                      isActive={index === activeImageIndex}
                     />
                   </Col>
                 ))}

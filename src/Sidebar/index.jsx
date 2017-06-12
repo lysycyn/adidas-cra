@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
-import Search from './Search';
 import Menu from './Menu';
 import Burger from './Burger';
 import media from '../styled/media';
@@ -61,7 +60,6 @@ class Sidebar extends Component {
           <Burger onChange={this.handleToggleMenu} />
         </HeaderWrapper>
         <MenuWrapper isMenuOpen={this.state.isMenuOpen}>
-          <Search />
           <Menu />
         </MenuWrapper>
       </Wrapper>

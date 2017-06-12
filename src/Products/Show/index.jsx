@@ -6,7 +6,7 @@ import ProductHeader from './Header';
 import Description from './Description';
 import ButtonBuyNow from './ButtonBuyNow';
 import media from '../../styled/media';
-import get from '../../api';
+import { get } from '../../api';
 
 const Wrapper = styled.section`
   padding: 1.1rem 0;
@@ -47,8 +47,7 @@ class Product extends Component {
   }
 
   render() {
-    const { activeColorIndex } = this.state;
-    const product = this.state.product;
+    const { product, activeColorIndex } = this.state;
     return (
       <Wrapper>
         <Content>
